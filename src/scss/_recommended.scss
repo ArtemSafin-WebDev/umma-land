@@ -1,0 +1,229 @@
+.recommended {
+    margin-bottom: 10rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.recommended__heading {
+    padding-top: 4rem;
+    border-top: 1px solid #efefef;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 4rem;
+
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        padding-top: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.recommended__products-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -2.8rem -4rem;
+
+    @include breakpoint(mobile) {
+        margin: -2rem -0.8rem;
+    }
+}
+
+.recommended__products-list-item {
+    padding: 2.8rem 4rem;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+
+    .register__favourites & {
+        @include breakpoint(small-tablet) {
+            width: 50%;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem 0.8rem;
+        width: 50%;
+    }
+}
+
+.recommended__products-card {
+    display: flex;
+    flex-direction: column;
+
+    .no-touch &:hover {
+        .recommended__products-card-image {
+            transform: scale(1.03);
+        }
+
+        .recommended__products-card-gallery-arrow {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+}
+
+.recommended__products-card-gallery {
+    margin-bottom: 2.4rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.6rem;
+    }
+}
+
+.recommended__products-card-image-container {
+    position: relative;
+
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+
+    &::after {
+        content: '';
+        padding-bottom: 117%;
+        display: block;
+        width: 100%;
+    }
+}
+
+.recommended__products-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+    @include objectFitCover();
+}
+
+.recommended__products-card-title {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.4rem;
+    }
+}
+
+.recommended__products-card-fav {
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+    display: inline-flex;
+    vertical-align: baseline;
+    color: transparent;
+
+    &.filled {
+        color: black;
+    }
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: black;
+    }
+}
+
+.recommended__products-card-color {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.4rem;
+    }
+}
+
+.recommended__products-card-price {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: baseline;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+}
+
+.recommended__products-card-price-new {
+    color: #ff0000;
+}
+
+.recommended__products-card-price-old {
+    text-decoration-line: line-through;
+    color: #656565;
+}
+
+.recommended__products-card-price-divider {
+    margin: 0 0.5rem;
+    color: #656565;
+}
+
+.recommended__content {
+    max-width: 144rem;
+    margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.recommended__products-card-gallery-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    transition: opacity 0.2s;
+    opacity: 0;
+
+    @include breakpoint(mobile) {
+        width: 4rem;
+        height: 4rem;
+    }
+    &--prev {
+        left: 2.5rem;
+
+        @include breakpoint(mobile) {
+            left: 0;
+        }
+    }
+
+    &--next {
+        right: 2.5rem;
+
+        @include breakpoint(mobile) {
+            right: 0;
+        }
+    }
+
+    svg {
+        width: 2rem;
+        height: 3.5rem;
+        fill: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.8;
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 2rem;
+        }
+    }
+}

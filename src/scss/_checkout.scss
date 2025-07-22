@@ -1,0 +1,599 @@
+.checkout {
+    margin-bottom: 10rem;
+    padding-top: 22.3rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+        padding-top: 16rem;
+    }
+}
+
+.checkout__row {
+    display: flex;
+    @include breakpoint(small-tablet) {
+        flex-direction: column;
+    }
+}
+
+.checkout__left-col {
+    width: 50%;
+    flex-grow: 1;
+    @include breakpoint(small-tablet) {
+        width: 100%;
+        margin-bottom: 7rem;
+        display: contents;
+    }
+}
+
+.checkout__right-col {
+    width: 48rem;
+    margin-left: 16rem;
+
+    @include breakpoint(tablet) {
+        margin-left: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin: 0;
+        width: 100%;
+        display: contents;
+    }
+}
+
+.checkout__cart {
+    margin-top: 3.7rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 4rem;
+    }
+}
+
+.checkout__cart-list {
+    border-top: 1px solid var(--text-color);
+}
+.checkout__cart-list-item {
+    border-bottom: 1px solid var(--text-grey);
+}
+
+.checkout__heading {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &--with-bar {
+        padding-bottom: 2.2rem;
+        border-bottom: 1px solid var(--text-color);
+    }
+}
+
+.checkout__cart-card {
+    padding: 2.4rem 0;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        padding: 2.4rem 0;
+    }
+}
+
+.checkout__cart-card-image-container {
+    width: 7rem;
+    height: 9rem;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 2.4rem;
+    background: #efefef;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.checkout__cart-card-content {
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+
+    color: var(--text-color);
+}
+
+.checkout__cart-card-title {
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.checkout__cart-card-color {
+    margin-bottom: 0.4rem;
+}
+
+.checkout__cart-card-info {
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-grow: 1;
+}
+
+.checkout__cart-card-price {
+    flex-shrink: 0;
+    margin-left: 2rem;
+    text-align: right;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.checkout__cart-card-price-old {
+    text-decoration-line: line-through;
+    text-transform: uppercase;
+    color: #a8a8a8;
+    margin-bottom: 0.4rem;
+}
+
+.checkout__cart-card-price-new {
+    color: #f00;
+}
+
+.checkout__cart-totals {
+}
+
+.checkout__cart-totals-item {
+    padding: 2.4rem 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--text-grey);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &:last-child {
+        border: none;
+    }
+
+    strong {
+        font-weight: 500;
+    }
+}
+
+.checkout__cart-totals-item-key {
+    color: var(--text-color);
+}
+
+.checkout__status {
+    margin-bottom: 6rem;
+}
+
+.checkout__status-stages-names {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+}
+
+.checkout__status-stages-name {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    color: var(--text-grey);
+    &--filled {
+        color: var(--text-color);
+    }
+    &:first-child {
+        text-align: left;
+    }
+
+    &:last-child {
+        text-align: right;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+}
+
+.checkout__status-indicators {
+    display: flex;
+    align-items: center;
+}
+
+.checkout__status-indicator-circle {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 1px solid #aeb4bb;
+    background-color: #fff;
+    position: relative;
+
+    &--filled {
+        border-color: var(--text-color);
+        background-color: var(--text-color);
+    }
+
+    &--passed {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            z-index: 20;
+            background-color: #000;
+            background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.93 8.3'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M11.63.3a1,1,0,0,0-1.42,0h0L4.59,5.93l-3-2.63a1,1,0,0,0-1.4.21,1,1,0,0,0,0,1.21L3.92,8A1,1,0,0,0,5.33,8l.14-.16.16-.13,6-6a1,1,0,0,0,0-1.42Z' /%3E%3C/svg%3E");
+            background-position: center;
+            background-size: 1.2rem 0.8rem;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.checkout__status-indicator-bar {
+    width: 50%;
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--text-grey);
+
+    &--filled {
+        background-color: var(--text-color);
+    }
+}
+
+.checkout__form-user-info {
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.checkout__form-heading {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 4rem;
+    justify-content: space-between;
+
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+}
+.checkout__has-account-link {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    color: var(--text-grey);
+    transition: color 0.2s, text-decoration-color 0.2s;
+
+    &:link,
+    &:visited {
+        color: var(--text-grey);
+    }
+
+    &:hover {
+        text-decoration-color: transparent;
+    }
+}
+.checkout__form-user-info-row,
+.checkout__form-delivery-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 3.2rem;
+    grid-row-gap: 1.6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.checkout__form-user-info-col,
+.checkout__form-delivery-col {
+    &--fullwidth {
+        width: 100%;
+        grid-column: 1 / -1;
+        margin: 1.6rem 0;
+    }
+
+    &--address-checkbox {
+        margin-bottom: 0.8rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.checkout__form-delivery-inner-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-gap: 1.6rem;
+    @include breakpoint(mobile) {
+        grid-gap: 3.2rem;
+        grid-row-gap: 1.6rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.checkout__form-delivery-inner-col {
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.checkout__use-promo {
+    padding-top: 3.7rem;
+
+    border-top: 1px solid var(--text-grey);
+}
+
+.checkout__use-promo-checkbox {
+    margin-bottom: 2rem;
+}
+
+.checkout__form-delivery-checkbox {
+    user-select: none;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.checkout__form-delivery-checkbox-input {
+    @include visuallyHidden();
+}
+
+.checkout__form-delivery-checkbox-content {
+    border: 1px solid var(--text-grey);
+    min-height: 11rem;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+
+    transition: border-color 0.2s;
+}
+
+.checkout__form-delivery-checkbox-content-type {
+    display: flex;
+    align-items: center;
+    color: var(--text-grey);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    transition: color 0.2s;
+    margin-top: 0.1rem;
+}
+
+.checkout__form-delivery-checkbox-mark {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    border: 1px solid var(--text-grey);
+    margin-right: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    border-radius: 50%;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background-color: #000;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.checkout__form-delivery-checkbox-content-address {
+    margin-top: auto;
+    color: var(--text-grey);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding-left: 2.8rem;
+    transition: color 0.2s;
+}
+
+.checkout__form-delivery-checkbox-input:checked ~ .checkout__form-delivery-checkbox-content {
+    border-color: var(--text-color);
+
+    .checkout__form-delivery-checkbox-mark {
+        border-color: var(--text-color);
+    }
+
+    .checkout__form-delivery-checkbox-mark::before {
+        opacity: 1;
+    }
+
+    .checkout__form-delivery-checkbox-content-type,
+    .checkout__form-delivery-checkbox-content-address {
+        color: black;
+    }
+}
+
+.checkout__form-submit-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: initial;
+    }
+}
+
+.checkout__form-submit {
+    padding: 1.8rem 3.2em;
+    flex-shrink: 0;
+    width: 35.4rem;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--text-color);
+    border: 0.2rem solid var(--text-color);
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.checkout__rules {
+    margin-top: 6rem;
+
+    @include breakpoint(small-tablet) {
+        order: 10;
+    }
+}
+
+.checkout__cart-wrapper {
+    @include breakpoint(small-tablet) {
+        margin-top: 7rem;
+    }
+}
+
+.checkout__form-delivery {
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.checkout__form-back-link {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 1.4rem;
+    color: #808080;
+    margin-right: auto;
+    &:link,
+    &:visited {
+        color: #808080;
+    }
+
+    .no-touch &:hover {
+        color: black;
+    }
+    svg {
+        width: 0.6rem;
+        height: 1.2rem;
+        flex-shrink: 0;
+        fill: #1d2734;
+        margin-right: 1rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.checkout__form-payment-checkbox {
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkout__form-payment-checkbox-content {
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+    min-height: 6.4rem;
+    border: 1px solid var(--text-grey);
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    color: var(--text-grey);
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.checkout__form-payment-checkbox-mark {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    border: 1px solid var(--text-grey);
+    margin-right: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    border-radius: 50%;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background-color: #000;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.checkout__form-payment-checkbox-text {
+    width: 30%;
+    flex-grow: 1;
+}
+
+.checkout__form-payment-checkbox-image {
+    height: 3rem;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.checkout__form-payment-checkbox-input {
+    @include visuallyHidden();
+}
+
+.checkout__form-payment-checkbox-input:checked ~ .checkout__form-payment-checkbox-content {
+    border-color: black;
+    color: black;
+
+    .checkout__form-payment-checkbox-mark::before {
+        opacity: 1;
+    }
+}
+
+.checkout__form-payment {
+    margin-bottom: 7rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.checkout__cart-card-quantity {
+}

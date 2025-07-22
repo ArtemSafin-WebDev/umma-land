@@ -1,0 +1,46 @@
+<div class="change-return-time js-change-return-time">
+    <div class="change-return-time__inner">
+        <div class="change-return-time__inner-top-row">
+            <h3 class="change-return-time__heading">
+                Перенести встречу с курьером
+            </h3>
+            <button class="change-return-time__close js-close-change-return-time" type="button">
+                <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                    <use xlink:href="#cross"></use>
+                </svg>
+            </button>
+        </div>
+        <form action="/" method="POST" class="change-return-time__form" data-parsley-validate>
+
+            <div class="change-return-time__date-time">
+                <div class="register__return-datetime">
+                    <div class="register__return-datetime-col">
+                        <div class="account-input-wrapper">
+                            <input type="text" class="account-input js-date-input" id="date" required placeholder="Дата"
+                                required data-parsley-date>
+                            <label class="account-label" for="date">
+                                Дата
+                            </label>
+                        </div>
+                    </div>
+                    <div class="register__return-datetime-col">
+                        <div class="account-input-wrapper">
+                            <input type="text" class="account-input js-time-input" id="time" required
+                                placeholder="Время" required data-parsley-time>
+                            <label class="account-label" for="time">
+                                Время
+                            </label>
+                        </div>
+                    </div>
+                    <div class="register__return-datetime-remark">
+                        *Выберите дату и время, когда вы сможете
+                        передать посылку курьеру
+                    </div>
+                </div>
+            </div>
+            <button class="change-return-time__form-submit" type="submit">
+                Перенести
+            </button>
+        </form>
+    </div>
+</div>

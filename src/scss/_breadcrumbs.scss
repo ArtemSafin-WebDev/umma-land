@@ -1,0 +1,48 @@
+.breadcrumbs__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs__list-item {
+    flex-shrink: 0;
+
+    &:last-child {
+        .breadcrumbs__link svg {
+            display: none;
+        }
+    }
+}
+
+.breadcrumbs__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--text-grey);
+
+    &:link,
+    &:visited {
+        color: var(--text-grey);
+    }
+
+    &:hover {
+        color: var(--text-color);
+    }
+
+    .breadcrumbs__list-item.active & {
+        color: var(--text-color);
+    }
+
+    svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: var(--text-grey);
+        flex-shrink: 0;
+        margin: 0 0.8rem;
+        margin-top: 0.2rem;
+    }
+}

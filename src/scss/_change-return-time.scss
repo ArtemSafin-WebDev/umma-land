@@ -1,0 +1,118 @@
+.change-return-time {
+    background: rgba(black, 0.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1800;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        pointer-events: none;
+    }
+
+    &.shown {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0.4rem;
+
+        .container {
+            display: contents;
+        }
+    }
+}
+
+.change-return-time__inner {
+    width: 100%;
+    max-width: 86rem;
+    margin: auto;
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 0.8rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+.change-return-time__inner-top-row {
+    padding-bottom: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #efefef;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 2.5rem;
+    }
+}
+
+.change-return-time__heading {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 500;
+    width: 30%;
+    flex-grow: 1;
+}
+
+.change-return-time__close {
+    flex-shrink: 0;
+    margin-left: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    position: relative;
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: #1d2734;
+    }
+}
+
+.change-return-time__form {
+    padding-top: 5.6rem;
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+    }
+}
+
+.change-return-time__date-time {
+    margin-bottom: 5.6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.5rem;
+    }
+
+    .register__return-datetime {
+        margin: 0;
+    }
+}
+
+.change-return-time__form-submit {
+    padding: 1.7rem 6.2rem;
+    background-color: #181818;
+    text-align: center;
+    color: white;
+    flex-shrink: 0;
+    display: inline-flex;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.2;
+}

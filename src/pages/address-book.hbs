@@ -1,0 +1,294 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="register">
+    <div class="container">
+        <div class="register__row">
+            <div class="register__left-col">
+                <h2 class="account-heading register__heading">
+                    Личный кабинет
+                </h2>
+                <nav class="register__account-nav">
+                    <ul class="register__account-nav-list">
+                        <li class="register__account-nav-list-item">
+                            <a href="#" class="register__account-nav-link">
+                                Информация
+                            </a>
+                        </li>
+                        <li class="register__account-nav-list-item">
+                            <a href="#" class="register__account-nav-link">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="register__account-nav-list-item">
+                            <a href="#" class="register__account-nav-link">
+                                Возврат товара
+                            </a>
+                        </li>
+                        <li class="register__account-nav-list-item active">
+                            <a href="#" class="register__account-nav-link">
+                                Адресная книга
+                            </a>
+                        </li>
+                        <li class="register__account-nav-list-item">
+                            <a href="#" class="register__account-nav-link">
+                                Избранное
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="register__right-col">
+                <h2 class="account-heading register__heading">
+                    <a href="#" class="register__heading-back-link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-left">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                        Адресная книга
+                    </a>
+                </h2>
+                <div class="register__address-book">
+                    <form action="/" method="POST" class="register__address-book-form" data-need-validation>
+                        <ul class="register__address-book-items">
+
+                            <li class="register__address-book-item">
+                                <div class="register__address-book-card">
+                                    <input type="radio" name="chooseaddress"
+                                        class="register__address-book-checkbox-input" id="homeaddress" checked>
+                                    <label for="homeaddress" class="register__address-book-checkbox">
+                                        <span class="register__address-book-checkbox-mark">
+
+                                        </span>
+                                        <span class="register__address-book-checkbox-text-wrapper">
+                                            <span class="register__address-book-checkbox-text">
+                                                Дом
+                                            </span>
+                                            <span class="register__address-book-checkbox-remark">
+                                                (используется как основной адрес)
+                                            </span>
+                                        </span>
+                                    </label>
+                                    <span class="register__address-book-card-border"></span>
+                                    <div class="register__address-book-card-inputs">
+                                        <div class="checkout__form-delivery-row">
+
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="country"
+                                                        data-parsley-required-if-checked="#homeaddress"
+                                                        data-parsley-validate-if-empty placeholder="Страна"
+                                                        value="Россия">
+                                                    <label class="account-label" for="country">
+                                                        Страна
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="city"
+                                                        data-parsley-required-if-checked="#homeaddress"
+                                                        data-parsley-validate-if-empty placeholder="Город"
+                                                        value="Казань">
+                                                    <label class="account-label" for="city">
+                                                        Город
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="region"
+                                                        data-parsley-required-if-checked="#homeaddress"
+                                                        data-parsley-validate-if-empty placeholder="Область"
+                                                        value="Республика Татарстан">
+                                                    <label class="account-label" for="region">
+                                                        Область
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="street"
+                                                        data-parsley-required-if-checked="#homeaddress"
+                                                        data-parsley-validate-if-empty placeholder="Улица"
+                                                        value="Некрасова">
+                                                    <label class="account-label" for="street">
+                                                        Улица
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="index"
+                                                        data-parsley-required-if-checked="#homeaddress"
+                                                        data-parsley-validate-if-empty placeholder="Индекс" value="">
+                                                    <label class="account-label" for="index">
+                                                        Индекс*
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="checkout__form-delivery-inner-row">
+                                                    <div class="checkout__form-delivery-inner-col">
+                                                        <div class="account-input-wrapper">
+                                                            <input type="text" class="account-input" id="building"
+                                                                data-parsley-required-if-checked="#homeaddress"
+                                                                data-parsley-validate-if-empty placeholder="Дом"
+                                                                value="9">
+                                                            <label class="account-label" for="building">
+                                                                Дом
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkout__form-delivery-inner-col">
+                                                        <div class="account-input-wrapper">
+                                                            <input type="text" class="account-input" id="flat"
+                                                                data-parsley-required-if-checked="#homeaddress"
+                                                                data-parsley-validate-if-empty placeholder="Квартира*"
+                                                                value="34">
+                                                            <label class="account-label" for="flat">
+                                                                Квартира*
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkout__form-delivery-inner-col">
+                                                        <div class="account-input-wrapper">
+                                                            <input type="text" class="account-input" id="section"
+                                                                placeholder="Корпус">
+                                                            <label class="account-label" for="section">
+                                                                Корпус
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="register__address-book-item">
+                                <div class="register__address-book-card">
+                                    <input type="radio" name="chooseaddress"
+                                        class="register__address-book-checkbox-input" id="workaddress">
+                                    <label for="workaddress" class="register__address-book-checkbox">
+                                        <span class="register__address-book-checkbox-mark">
+
+                                        </span>
+                                        <span class="register__address-book-checkbox-text">
+                                            Работа
+                                        </span>
+
+                                    </label>
+                                    <span class="register__address-book-card-border"></span>
+                                    <div class="register__address-book-card-inputs">
+                                        <div class="checkout__form-delivery-row">
+
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="country"
+                                                        data-parsley-required-if-checked="#workaddress"
+                                                        data-parsley-validate-if-empty placeholder="Страна"
+                                                        value="Россия">
+                                                    <label class="account-label" for="country">
+                                                        Страна
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="city"
+                                                        data-parsley-required-if-checked="#workaddress"
+                                                        data-parsley-validate-if-empty placeholder="Город"
+                                                        value="Казань">
+                                                    <label class="account-label" for="city">
+                                                        Город
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="region"
+                                                        data-parsley-required-if-checked="#workaddress"
+                                                        data-parsley-validate-if-empty placeholder="Область"
+                                                        value="Республика Татарстан">
+                                                    <label class="account-label" for="region">
+                                                        Область
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="street"
+                                                        data-parsley-required-if-checked="#workaddress"
+                                                        data-parsley-validate-if-empty placeholder="Улица"
+                                                        value="Некрасова">
+                                                    <label class="account-label" for="street">
+                                                        Улица
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="index"
+                                                        data-parsley-required-if-checked="#workaddress"
+                                                        data-parsley-validate-if-empty placeholder="Индекс" value="">
+                                                    <label class="account-label" for="index">
+                                                        Индекс*
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="checkout__form-delivery-col">
+                                                <div class="checkout__form-delivery-inner-row">
+                                                    <div class="checkout__form-delivery-inner-col">
+                                                        <div class="account-input-wrapper">
+                                                            <input type="text" class="account-input" id="building"
+                                                                data-parsley-required-if-checked="#workaddress"
+                                                                data-parsley-validate-if-empty placeholder="Дом"
+                                                                value="9">
+                                                            <label class="account-label" for="building">
+                                                                Дом
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkout__form-delivery-inner-col">
+                                                        <div class="account-input-wrapper">
+                                                            <input type="text" class="account-input" id="flat"
+                                                                data-parsley-required-if-checked="#workaddress"
+                                                                data-parsley-validate-if-empty placeholder="Квартира*"
+                                                                value="34">
+                                                            <label class="account-label" for="flat">
+                                                                Квартира*
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkout__form-delivery-inner-col">
+                                                        <div class="account-input-wrapper">
+                                                            <input type="text" class="account-input" id="section"
+                                                                placeholder="Корпус">
+                                                            <label class="account-label" for="section">
+                                                                Корпус
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="register__address-book-submit" type="submit">
+                            Добавить адрес
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

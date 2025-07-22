@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1403" preserveAspectRatio="none">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+                stroke: #979797;
+                stroke-dasharray: 4;
+            }
+        </style>
+    </defs>
+    <rect class="cls-1" width="900" height="1403" rx="8" vector-effect="non-scaling-stroke"/>
+</svg>

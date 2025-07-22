@@ -1,0 +1,55 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="register">
+    <div class="container">
+        <div class="register__row">
+            <div class="register__left-col">
+                <h2 class="account-heading register__heading">
+                    Аккаунт
+                </h2>
+                <a href="#" class="register__has-account-link">
+                    Создать аккаунт
+                </a>
+            </div>
+            <div class="register__right-col">
+                <h2 class="account-heading register__heading">
+                    Авторизация
+                </h2>
+                <form action="#" class="register__form" data-need-validation>
+                    <div class="register__form-row">
+                        <div class="register__form-col">
+                            <div class="account-input-wrapper">
+                                <input type="text" class="account-input" id="login" required placeholder="Логин*">
+                                <label class="account-label" for="login">
+                                    Логин*
+                                </label>
+                            </div>
+                        </div>
+                        <div class="register__form-col">
+                            <div class="account-input-wrapper">
+                                <input type="password" class="account-input" id="password1" required
+                                    placeholder="Пароль*">
+                                <label class="account-label" for="password1">
+                                    Пароль*
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="register__btns">
+                        <a href="#" class="register__forgot-password">
+                            Забыли пароль?
+                        </a>
+                        <button class="account-submit register__submit" type="button">
+                            Войти
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

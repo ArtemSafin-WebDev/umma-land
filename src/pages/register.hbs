@@ -1,0 +1,88 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="register">
+    <div class="container">
+        <div class="register__row">
+            <div class="register__left-col">
+                <h2 class="account-heading register__heading">
+                    Аккаунт
+                </h2>
+                <a href="#" class="register__has-account-link">
+                    У меня есть аккаунт
+                </a>
+            </div>
+            <div class="register__right-col">
+                <h2 class="account-heading register__heading">
+                    Регистрация
+                </h2>
+                <form action="#" class="register__form">
+                    <div class="register__form-row">
+                        <div class="register__form-col">
+                            <div class="account-input-wrapper">
+
+                                <input type="text" class="account-input" id="firstname" required placeholder="Имя">
+                                <label class="account-label" for="firstname">
+                                    Имя*
+                                </label>
+                            </div>
+                        </div>
+                        <div class="register__form-col">
+                            <div class="account-input-wrapper">
+
+                                <input type="text" class="account-input" id="lastname" required placeholder="Фамилия*">
+                                <label class="account-label" for="lastname">
+                                    Фамилия*
+                                </label>
+                            </div>
+                        </div>
+                        <div class="register__form-col">
+                            <div class="account-input-wrapper">
+
+                                <input type="email" class="account-input" id="email" required placeholder="Email*">
+                                <label class="account-label" for="email">
+                                    Email*
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register__form-row">
+                        <div class="register__form-col">
+                            <div class="account-input-wrapper">
+                                <input type="password" class="account-input" id="password1" required placeholder="Пароль*">
+                                <label class="account-label" for="password1">
+                                    Пароль*
+                                </label>
+                            </div>
+                        </div>
+                        <div class="register__form-col">
+                            <div class="account-input-wrapper">
+                                <input type="password" class="account-input" id="password2" required placeholder="Повторить пароль*" data-parsley-equalto="#password1">
+                                <label class="account-label" for="password2">
+                                    Повторить пароль*
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register__btns">
+                        <label class="account-checkbox register__subscription-checkbox">
+                            <input type="checkbox" class="account-checkbox-input">
+                            <span class="account-checkbox-mark">
+
+                            </span>
+                            <span class="account-checkbox-text">
+                                Подписаться на рассылку 
+                            </span>
+                        </label>
+                        <button class="account-submit register__submit" type="button">
+                            Создать аккаунт
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

@@ -1,0 +1,379 @@
+.account-heading {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--text-color);
+
+    a {
+        &:link,
+        &:visited {
+            color: inherit;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+}
+
+.account-input-wrapper {
+    position: relative;
+
+    .parsley-errors-list.filled {
+        font-size: 1.2rem;
+        color: #ff3203;
+        margin-top: 0.5rem;
+    }
+}
+
+.account-label {
+    transition: transform 0.3s;
+    position: absolute;
+    left: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 1.2;
+
+    top: 1.9rem;
+    pointer-events: none;
+    transform-origin: left top;
+    transform: translateZ(0);
+}
+
+.account-input {
+    border: 1px solid var(--text-grey);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 1.8rem;
+    padding-top: 2.7rem;
+    padding-bottom: 0.8rem;
+    display: block;
+    width: 100%;
+    transition: border-color 0.3s;
+    &:focus {
+        border-color: var(--text-color);
+    }
+
+    &.parsley-error {
+        border-color: #ff3203;
+    }
+
+    @include placeholder {
+        opacity: 0;
+    }
+}
+
+.account-input:focus ~ .account-label,
+.account-input:not(:placeholder-shown) ~ .account-label,
+.account-input:-webkit-autofill ~ .account-label {
+    transform: scale(0.8) translateY(-1rem);
+}
+
+.account-checkbox {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+}
+
+.account-checkbox-input {
+    @include visuallyHidden();
+}
+
+.account-checkbox-mark {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    border: 1px solid var(--text-color);
+    margin-right: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    margin-top: 0.2rem;
+    &::before {
+        content: '';
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        background-color: var(--text-color);
+        pointer-events: none;
+        transition: opacity 0.2s;
+        opacity: 0;
+    }
+
+    .parsley-error & {
+        border-color: #ff3203;
+    }
+
+    &--radio {
+        border-radius: 50%;
+        &::before {
+            border-radius: 50%;
+        }
+    }
+}
+
+.account-checkbox-text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.account-checkbox-input:checked ~ .account-checkbox-mark::before {
+    opacity: 1;
+}
+
+.account-address-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1.6rem;
+}
+
+.account-address-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-list {
+    // display: flex;
+    // flex-wrap: wrap;
+    // margin: -0.8rem -1.6rem;
+
+    column-count: 2;
+    column-gap: 3.2rem;
+
+    @include breakpoint(mobile) {
+        column-count: 1;
+    }
+}
+
+.account-list-item {
+    // width: 50%;
+    // padding: 0.8rem 1.6rem;
+
+    break-inside: auto;
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.account-list-card {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    padding-left: 2.5rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.35rem;
+
+        background-image: url('../img/checkmark.svg');
+        width: 1.2rem;
+        height: 1.2rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.account-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem 3.2rem;
+    border: 0.2rem solid var(--text-color);
+    color: var(--text-color);
+    text-align: center;
+    flex-shrink: 0;
+    width: 35.4rem;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &:link,
+    &:visited {
+        color: var(--text-color);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-color: var(--text-color);
+            color: white;
+        }
+    }
+}
+
+.account-select {
+    text-align: left;
+
+    .parsley-errors-list.filled {
+        font-size: 1.2rem;
+        color: #ff3203;
+        margin-top: 0.5rem;
+    }
+
+    .choices {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2rem;
+
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .choices.is-open {
+        z-index: 30;
+    }
+
+    .choices[data-type*='select-one'].is-open::after {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    .choices[data-type*='select-one'] .choices__inner {
+        padding-bottom: 0.5rem;
+    }
+
+    .choices__inner {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding: 0.5rem 1.8rem;
+        border: 1px solid #e2e2e2;
+        min-height: 5.4rem;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border-radius: 0;
+        transition: border-color 0.2s;
+    }
+
+    &.parsley-error {
+        .choices__inner {
+            border-color: #ff3203;
+        }
+    }
+
+    .choices__list--single {
+        padding: 0;
+        padding-right: 1.8rem;
+    }
+
+    .choices[data-type*='select-one']:after {
+        border: none;
+        margin: 0;
+        right: 1.8rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d2734;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M2,5.72a1.31,1.31,0,0,1-1.61,0A.91.91,0,0,1,.24,4.39a.57.57,0,0,1,.11-.11L5.2.28a1.29,1.29,0,0,1,1.6,0l4.85,4a.92.92,0,0,1,.11,1.34l-.11.1a1.31,1.31,0,0,1-1.61,0L6,2.39Z'/%3E%3C/svg%3E");
+        width: 1.2rem;
+        height: 0.6rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s;
+    }
+
+    .choices__placeholder {
+        opacity: 1;
+    }
+
+    .choices__list--dropdown {
+        word-break: initial;
+        border: 1px solid #e2e2e2;
+        border-top: none;
+        background: white;
+        border-radius: 0 !important;
+
+        margin-top: 0;
+        box-shadow: none;
+    }
+
+    .choices__list--dropdown .choices__item {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2rem;
+
+        padding: 1rem 1.8rem;
+    }
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        background: var(--text-color);
+        color: white;
+    }
+
+    .choices__list--dropdown .choices__list {
+        max-height: 20rem;
+
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            background-color: white;
+            width: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--text-color);
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        @include breakpoint(mobile) {
+            max-height: 15rem;
+        }
+    }
+
+    select {
+        @include breakpoint(mobile) {
+            border: none;
+            outline: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            font: inherit;
+            display: block;
+            width: 100%;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            padding: 0.5rem 1.6rem;
+            border: 1px solid #e2e2e2;
+
+            font-weight: 500;
+            min-height: 5.4rem;
+            display: flex;
+            align-items: center;
+            background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %231d2734; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M6,3.61,10,.28a1.31,1.31,0,0,1,1.61,0l.11.1,0,0a.91.91,0,0,1-.15,1.29l-4.85,4a1.29,1.29,0,0,1-1.6,0l-4.85-4a.57.57,0,0,1-.11-.11l0-.06A.91.91,0,0,1,.39.28,1.31,1.31,0,0,1,2,.28Z' /%3E%3C/svg%3E");
+            background-size: 1.2rem 0.6rem;
+            background-position: right 1.6rem center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &.parsley-error {
+        @include breakpoint(mobile) {
+            select {
+                border-color: #ff3203;
+            }
+        }
+    }
+}

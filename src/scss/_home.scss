@@ -1,0 +1,217 @@
+.home {
+    @include breakpoint(small-tablet) {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+    }
+}
+
+.home__content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(small-tablet) {
+        flex-grow: 1;
+    }
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+    }
+}
+
+.home__slider {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+
+    @include breakpoint(small-tablet) {
+        min-height: 80rem;
+    }
+
+    @include breakpoint(mobile) {
+        min-height: calc(100vh - 8rem);
+    }
+    .swiper-container {
+        margin: 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .swiper-wrapper {
+        flex-grow: 1;
+
+        // @include breakpoint(mobile) {
+        //     flex-direction: column;
+        //     flex-grow: 0;
+        // }
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.home__slider-card {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    // @include breakpoint(mobile) {
+    //     min-height: calc(100vh - 10rem);
+    //     flex-grow: 0;
+    // }
+}
+
+.home__slider-card-bg {
+    position: absolute;
+    left: calc(-1 * (100vw - 100%) / 2);
+    right: calc(-1 * (100vw - 100%) / 2);
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(black, 0.15);
+    }
+}
+
+.home__slider-card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.home__slider-card-content {
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: 6.2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.home__slider-card-content--white {
+    color: white;
+}
+
+.home__slider-card-content--white-on-mobile {
+    @include breakpoint(mobile) {
+        color: white;
+    }
+}
+
+.home__slider-card-title {
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+    }
+}
+
+.home__slider-card-text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 2.5rem;
+    max-width: 50rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.home__slider-card-learn-more {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    position: relative;
+    padding-top: 0.8rem;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        min-width: 19rem;
+        text-align: right;
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: -6.2rem;
+        height: 0.2rem;
+        background-color: currentColor;
+
+        @include breakpoint(tablet) {
+            left: 0;
+        }
+    }
+}
+
+.home__slider-pagination {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 30;
+    .swiper-pagination-bullet {
+        margin-bottom: 1rem;
+
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+
+        opacity: 1;
+        border: none;
+        background: transparent;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        &.swiper-pagination-bullet-active {
+            &::before {
+                transform: translate(-50%, -50%) scale(1.8);
+            }
+        }
+    }
+}
