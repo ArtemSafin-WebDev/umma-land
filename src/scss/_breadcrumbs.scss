@@ -23,6 +23,12 @@
     font-weight: 500;
     line-height: normal;
     color: var(--text-grey);
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
 
     &:link,
     &:visited {
@@ -44,5 +50,10 @@
         flex-shrink: 0;
         margin: 0 0.8rem;
         margin-top: 0.2rem;
+
+        @include breakpoint(mobile) {
+            margin: 0 0.2rem;
+            margin-top: 0.2rem;
+        }
     }
 }

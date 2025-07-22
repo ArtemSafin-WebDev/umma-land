@@ -4234,6 +4234,9 @@ select:-webkit-autofill:focus {
 @media only screen and (max-width: 640px) {
   .catalog__filters-dropdown-group {
     margin-bottom: 3rem;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
 }
 .catalog__filters-dropdown-group:last-child {
@@ -4241,35 +4244,34 @@ select:-webkit-autofill:focus {
 }
 
 .catalog__filters-dropdown-group-list {
-  margin: -1.2rem -7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-column-gap: 1.4rem;
+  grid-row-gap: 2.4rem;
 }
 @media only screen and (max-width: 640px) {
   .catalog__filters-dropdown-group-list {
-    margin: -0.8rem -1.4rem;
+    padding-top: 1.8rem;
+    grid-column-gap: 2.8rem;
+    grid-row-gap: 1.6rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 .catalog__filters-dropdown-group-list-item {
-  width: 100%;
-  padding: 1.2rem 7rem;
+  grid-column: 1/-1;
 }
 @media only screen and (max-width: 640px) {
   .catalog__filters-dropdown-group-list-item {
-    padding: 0.8rem 1.4rem;
-    width: 50%;
+    grid-column: span 1;
   }
 }
 .catalog__filters-dropdown-group-list--three-col .catalog__filters-dropdown-group-list-item {
-  width: 33.33%;
+  grid-column: span 2;
 }
 @media only screen and (max-width: 640px) {
   .catalog__filters-dropdown-group-list--three-col .catalog__filters-dropdown-group-list-item {
-    width: 50%;
+    grid-column: span 1;
   }
 }
 
@@ -4447,7 +4449,7 @@ select:-webkit-autofill:focus {
 @media only screen and (max-width: 640px) {
   .catalog__list {
     grid-column-gap: 1.6rem;
-    grid-row-gap: 4rem;
+    grid-row-gap: 2.8rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -4463,17 +4465,23 @@ select:-webkit-autofill:focus {
   grid-column: span 2;
 }
 @media only screen and (min-width: 641px) {
-  .catalog__list-item:nth-child(5n-1) {
+  .catalog__list-item:nth-child(6n+4) {
     grid-column: span 3;
   }
-  .catalog__list-item:nth-child(5n-1) .catalog__card-image-gallery-card::after {
+  .catalog__list-item:nth-child(6n+4) .catalog__card-image-gallery-card::after {
     padding-bottom: 112%;
   }
-  .catalog__list-item:nth-child(5n) {
+  .catalog__list-item:nth-child(6n+5) {
     grid-column: span 3;
   }
-  .catalog__list-item:nth-child(5n) .catalog__card-image-gallery-card::after {
+  .catalog__list-item:nth-child(6n+5) .catalog__card-image-gallery-card::after {
     padding-bottom: 112%;
+  }
+  .catalog__list-item:nth-child(6n+6) {
+    grid-column: 1/-1;
+  }
+  .catalog__list-item:nth-child(6n+6) .catalog__card-image-gallery-card::after {
+    padding-bottom: 61%;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -4507,7 +4515,7 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (max-width: 640px) {
   .catalog__card-image-gallery {
-    margin-bottom: 1.6rem;
+    margin-bottom: 0.8rem;
   }
 }
 
@@ -4744,8 +4752,8 @@ select:-webkit-autofill:focus {
   }
   .catalog__filters-accordion-btn svg {
     display: block;
-    width: 1.2rem;
-    height: 0.6rem;
+    width: 0.8rem;
+    height: 0.8rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-left: 2rem;
@@ -4763,14 +4771,21 @@ select:-webkit-autofill:focus {
 
 @media only screen and (max-width: 640px) {
   .catalog__filters-accordion-content {
-    height: 0;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 0fr;
+    -webkit-transition: grid-template-rows 500ms;
+    transition: grid-template-rows 500ms;
+    transition: grid-template-rows 500ms, -ms-grid-rows 500ms;
+  }
+  .catalog__filters-accordion-content.active {
+    grid-template-rows: 1fr;
   }
 }
 
 @media only screen and (max-width: 640px) {
   .catalog__filters-accordion-content-inner {
-    padding-top: 1.8rem;
+    overflow: hidden;
   }
 }
 
@@ -4955,6 +4970,17 @@ select:-webkit-autofill:focus {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 1rem;
 }
+@media only screen and (max-width: 640px) {
+  .catalog__card-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1rem;
+  }
+}
 
 .catalog__card-buy-btn {
   color: var(--text-grey);
@@ -4966,6 +4992,49 @@ select:-webkit-autofill:focus {
           text-decoration-line: underline;
   -webkit-text-decoration-style: solid;
           text-decoration-style: solid;
+}
+@media only screen and (max-width: 640px) {
+  .catalog__card-buy-btn {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: auto;
+  }
+}
+
+.catalog__load-more-btn {
+  display: block;
+  text-align: center;
+  padding: 1.8rem 3.6rem;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: 0.2rem solid var(--text-color);
+  color: var(--text-color);
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  margin-top: 6rem;
+}
+@media only screen and (max-width: 640px) {
+  .catalog__load-more-btn {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 1.5rem 3.2rem;
+    border: 1px solid var(--text-color);
+    margin-top: 3rem;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .catalog__load-more-btn:hover {
+    background-color: var(--text-color);
+    color: white;
+  }
 }
 
 .breadcrumbs__list {
@@ -5003,6 +5072,14 @@ select:-webkit-autofill:focus {
   line-height: normal;
   color: var(--text-grey);
 }
+@media only screen and (max-width: 640px) {
+  .breadcrumbs__link {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
 .breadcrumbs__link:link, .breadcrumbs__link:visited {
   color: var(--text-grey);
 }
@@ -5020,6 +5097,12 @@ select:-webkit-autofill:focus {
       flex-shrink: 0;
   margin: 0 0.8rem;
   margin-top: 0.2rem;
+}
+@media only screen and (max-width: 640px) {
+  .breadcrumbs__link svg {
+    margin: 0 0.2rem;
+    margin-top: 0.2rem;
+  }
 }
 
 .product {
