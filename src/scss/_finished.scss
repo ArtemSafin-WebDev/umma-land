@@ -220,8 +220,7 @@
 .finished__totals-item-key,
 .finished__totals-item-value {
     .finished__totals-item--total & {
-        font-weight: 700;
-        color: black;
+        color: var(--text-color);
     }
 }
 

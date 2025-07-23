@@ -351,7 +351,6 @@
 }
 
 .catalog__filters-dropdown-checkbox-input:checked ~ .catalog__filters-dropdown-checkbox-text {
-    font-weight: 700;
     &::after {
         opacity: 1;
     }
@@ -524,9 +523,8 @@
 
     @include breakpoint(mobile) {
         grid-column: span 1;
-        &.catalog__list-item--set-size.catalog__list-item--set-size-half,
-        &.catalog__list-item--set-size.catalog__list-item--set-size-full,
-        &:not(.catalog__list-item--set-size):nth-child(3n) {
+
+        &:nth-child(3n) {
             grid-column: 1 / -1;
         }
     }

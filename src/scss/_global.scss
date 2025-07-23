@@ -55,7 +55,7 @@ body {
         overscroll-behavior: none;
     }
 
-    body:has(.catalog__filters-dropdown.active) & {
+    body:has(.catalog__filters-dropdown.active) {
         touch-action: none;
         -webkit-overflow-scrolling: none;
         overflow: hidden;
