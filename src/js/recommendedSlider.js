@@ -1,14 +1,11 @@
 import { Swiper, Navigation } from 'swiper';
-import { MOBILE_WIDTH } from './constants';
 
 Swiper.use([Navigation]);
 
 export default function recommendedSlider() {
-   
     const elements = Array.from(document.querySelectorAll('.js-recommended-gallery'));
 
     const initializeRecommendedGallery = element => {
-      
         const container = element.querySelector('.swiper-container');
 
         new Swiper(container, {
@@ -23,8 +20,6 @@ export default function recommendedSlider() {
 
     window.recommendedCard = {};
     window.recommendedCard.initializeRecommendedGallery = initializeRecommendedGallery;
-
-   
 
     elements.forEach(element => {
         initializeRecommendedGallery(element);

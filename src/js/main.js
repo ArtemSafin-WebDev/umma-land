@@ -18,6 +18,7 @@ import recommendedSlider from './recommendedSlider';
 import timeMask from './timeMask';
 import searchModal from './searchModal';
 import changeReturnTime from './changeReturnTime';
+import productImages from './productImages';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     timeMask();
     searchModal();
     changeReturnTime();
+    productImages();
 });
 
 window.addEventListener('load', function() {

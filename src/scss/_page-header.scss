@@ -55,6 +55,10 @@
                 transition: opacity 0.3s, visibility 0.3s;
             }
         }
+
+        .product-images-shown & {
+            background: transparent;
+        }
     }
 }
 
@@ -292,6 +296,11 @@
             &:visited {
                 color: var(--text-color);
             }
+        }
+
+        .product-images-shown:not(.mobile-menu-open) & {
+            opacity: 0;
+            visibility: hidden;
         }
     }
 

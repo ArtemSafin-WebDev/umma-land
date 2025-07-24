@@ -5,37 +5,43 @@
         <section class="product">
             <div class="container">
                 <div class="product__row">
-                    <div class="product__left-col js-sticky-product-images">
-                        <div class="product__images">
-                            <div class="product__image-block">
-                                <a href="img/product-detail.webp" class="product__image-link"
-                                    data-fancybox="product-gallery">
-                                    <img src="img/product-detail.webp" alt="" class="product__image">
-                                </a>
+                    <div class="product__left-col">
+                        <div class="product__images-wrapper">
+
+
+                            <div class="product__images js-product-images-slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product__image-link">
+                                                <img src="img/product-detail.webp" alt="" class="product__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product__image-link">
+                                                <img src="img/product-detail.webp" alt="" class="product__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product__image-link">
+                                                <img src="img/product-detail.webp" alt="" class="product__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__images-pagination">
+
+                                </div>
                             </div>
-                            <div class="product__image-block">
-                                <a href="img/product-detail.webp" class="product__image-link"
-                                    data-fancybox="product-gallery">
-                                    <img src="img/product-detail.webp" alt="" class="product__image">
-                                </a>
-                            </div>
-                            <div class="product__image-block">
-                                <a href="img/product-detail.webp" class="product__image-link"
-                                    data-fancybox="product-gallery">
-                                    <img src="img/product-detail.webp" alt="" class="product__image">
-                                </a>
-                            </div>
-                            <div class="product__image-block">
-                                <a href="img/product-detail.webp" class="product__image-link"
-                                    data-fancybox="product-gallery">
-                                    <img src="img/product-detail.webp" alt="" class="product__image">
-                                </a>
-                            </div>
+                            <button class="product__images-toggle-btn" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="11" viewBox="0 0 29 11">
+                                    <path
+                                        d="M28.2091 0.0927871C28.4337 -0.0676955 28.7468 -0.0156305 28.9073 0.208998C29.0678 0.433674 29.0157 0.746716 28.7911 0.90724L14.7911 10.9072C14.6172 11.0314 14.3829 11.0314 14.2091 10.9072L0.209055 0.90724L0.132883 0.839857C-0.0251361 0.669478 -0.0475045 0.405486 0.0928444 0.208998C0.233387 0.0123312 0.490651 -0.0517481 0.703196 0.0429824L0.791087 0.0927871L14.5001 9.88478L28.2091 0.0927871Z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     <div class="product__right-col">
-
-
                         <div class="product__content">
                             <div class="product__season">
                                 Мансур Ладанов
@@ -44,6 +50,9 @@
                                 ГОры и город.<br>
                                 Следы на снегу
                             </h1>
+                            <div class="product__prices">
+                                22 900 ₽
+                            </div>
                             <div class="product__description">
                                 <div class="product__description-text">
                                     <p>
