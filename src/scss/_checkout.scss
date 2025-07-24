@@ -105,7 +105,13 @@
     font-style: normal;
     line-height: 1.2;
     font-weight: 500;
-    margin-bottom: 0.4rem;
+    margin-bottom: 1.6rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 400;
+        font-size: 1.4rem;
+        margin-bottom: 1.4rem;
+    }
 }
 
 .checkout__cart-card-color {
@@ -155,11 +161,15 @@
     border-bottom: 1px solid var(--text-grey);
     font-size: 1.6rem;
     font-style: normal;
-    font-weight: 500;
-    line-height: normal;
 
+    line-height: normal;
     &:last-child {
         border: none;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        border-color: #efefef;
     }
 
     strong {
@@ -272,6 +282,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
 }
 .checkout__has-account-link {
     font-size: 1.6rem;
@@ -294,6 +309,11 @@
 
     &:hover {
         text-decoration-color: transparent;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2rem;
     }
 }
 .checkout__form-user-info-row,
@@ -345,9 +365,13 @@
 }
 
 .checkout__use-promo {
-    padding-top: 3.7rem;
+    padding-top: 3.5rem;
 
     border-top: 1px solid var(--text-grey);
+    @include breakpoint(mobile) {
+        border-color: #efefef;
+        margin-top: 2rem;
+    }
 }
 
 .checkout__use-promo-checkbox {
@@ -385,6 +409,10 @@
     margin-bottom: 2rem;
     transition: color 0.2s;
     margin-top: 0.1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
 }
 
 .checkout__form-delivery-checkbox-mark {
@@ -419,10 +447,14 @@
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 2rem;
     text-transform: uppercase;
     padding-left: 2.8rem;
     transition: color 0.2s;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
 }
 
 .checkout__form-delivery-checkbox-input:checked ~ .checkout__form-delivery-checkbox-content {
@@ -464,9 +496,23 @@
     line-height: normal;
     color: var(--text-color);
     border: 0.2rem solid var(--text-color);
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-color: var(--text-color);
+            color: white;
+        }
+    }
 
     @include breakpoint(mobile) {
-        width: 100%;
+        width: auto;
+        border: 1px solid var(--text-color);
+        padding: 1.6rem 3.2rem;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
     }
 }
 

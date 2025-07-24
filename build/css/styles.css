@@ -7613,6 +7613,11 @@ select:-webkit-autofill:focus {
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
 }
+@media only screen and (max-width: 640px) {
+  .account-input {
+    font-size: 1.4rem;
+  }
+}
 .account-input:focus {
   border-color: var(--text-color);
 }
@@ -7715,6 +7720,12 @@ select:-webkit-autofill:focus {
   font-style: normal;
   font-weight: 400;
   line-height: 2rem;
+}
+@media only screen and (max-width: 640px) {
+  .account-checkbox-text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 
 .account-checkbox-input:checked ~ .account-checkbox-mark::before {
@@ -8111,7 +8122,14 @@ select:-webkit-autofill:focus {
   font-style: normal;
   line-height: 1.2;
   font-weight: 500;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1.6rem;
+}
+@media only screen and (max-width: 640px) {
+  .checkout__cart-card-title {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
 }
 
 .checkout__cart-card-color {
@@ -8173,11 +8191,16 @@ select:-webkit-autofill:focus {
   border-bottom: 1px solid var(--text-grey);
   font-size: 1.6rem;
   font-style: normal;
-  font-weight: 500;
   line-height: normal;
 }
 .checkout__cart-totals-item:last-child {
   border: none;
+}
+@media only screen and (max-width: 640px) {
+  .checkout__cart-totals-item {
+    font-size: 1.4rem;
+    border-color: #efefef;
+  }
 }
 .checkout__cart-totals-item strong {
   font-weight: 500;
@@ -8304,6 +8327,12 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   line-height: 2rem;
 }
+@media only screen and (max-width: 640px) {
+  .checkout__form-heading {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
 
 .checkout__has-account-link {
   font-size: 1.6rem;
@@ -8331,6 +8360,12 @@ select:-webkit-autofill:focus {
 .checkout__has-account-link:hover {
   -webkit-text-decoration-color: transparent;
           text-decoration-color: transparent;
+}
+@media only screen and (max-width: 640px) {
+  .checkout__has-account-link {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 
 .checkout__form-user-info-row,
@@ -8390,8 +8425,14 @@ select:-webkit-autofill:focus {
 }
 
 .checkout__use-promo {
-  padding-top: 3.7rem;
+  padding-top: 3.5rem;
   border-top: 1px solid var(--text-grey);
+}
+@media only screen and (max-width: 640px) {
+  .checkout__use-promo {
+    border-color: #efefef;
+    margin-top: 2rem;
+  }
 }
 
 .checkout__use-promo-checkbox {
@@ -8451,6 +8492,11 @@ select:-webkit-autofill:focus {
   transition: color 0.2s;
   margin-top: 0.1rem;
 }
+@media only screen and (max-width: 640px) {
+  .checkout__form-delivery-checkbox-content-type {
+    font-size: 1.4rem;
+  }
+}
 
 .checkout__form-delivery-checkbox-mark {
   width: 1.6rem;
@@ -8495,11 +8541,16 @@ select:-webkit-autofill:focus {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 2rem;
   text-transform: uppercase;
   padding-left: 2.8rem;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+}
+@media only screen and (max-width: 640px) {
+  .checkout__form-delivery-checkbox-content-address {
+    font-size: 1.4rem;
+  }
 }
 
 .checkout__form-delivery-checkbox-input:checked ~ .checkout__form-delivery-checkbox-content {
@@ -8549,10 +8600,24 @@ select:-webkit-autofill:focus {
   line-height: normal;
   color: var(--text-color);
   border: 0.2rem solid var(--text-color);
+  -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .checkout__form-submit:hover {
+    background-color: var(--text-color);
+    color: white;
+  }
 }
 @media only screen and (max-width: 640px) {
   .checkout__form-submit {
-    width: 100%;
+    width: auto;
+    border: 1px solid var(--text-color);
+    padding: 1.6rem 3.2rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
 }
 
