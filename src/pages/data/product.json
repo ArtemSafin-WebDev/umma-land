@@ -1,5 +1,4 @@
 {
     "title": "Outpac - Карточка товара",
-    "darkHeader": true,
-    "headerFixed": true
+    "headerFilled": true
 }

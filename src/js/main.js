@@ -14,7 +14,6 @@ import mobileFooterAccordions from './mobileFooterAccordions';
 import mobileMenu from './mobileMenu';
 import cartDropdown from './cartDropdown';
 import deliveryInfo from './deliveryInfo';
-import stickyProduct from './stickyProduct';
 import recommendedSlider from './recommendedSlider';
 import timeMask from './timeMask';
 import searchModal from './searchModal';
@@ -36,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu();
     cartDropdown();
     deliveryInfo();
-    stickyProduct();
     recommendedSlider();
     timeMask();
     searchModal();
