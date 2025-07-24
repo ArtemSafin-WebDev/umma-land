@@ -158,27 +158,28 @@
     }
 }
 
-.register__account-nav-list-item {
-    margin-bottom: 4rem;
-    &:last-child {
-        margin-bottom: 0;
-    }
+.register__account-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 2rem;
+        gap: 2rem;
     }
 }
 
 .register__account-nav-link {
-    font-size: 1.4rem;
-    line-height: 2rem;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s;
     display: inline;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
 
     &:hover,
     .register__account-nav-list-item.active & {
-        border-color: var(--text-color);
+        font-weight: 500;
     }
 }
 
@@ -200,12 +201,16 @@
     td,
     th {
         width: 50%;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         line-height: 2rem;
         text-align: left;
 
         font-weight: 400;
         color: var(--text-color);
+
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+        }
     }
 
     td {
@@ -217,7 +222,7 @@
         display: flex;
         align-items: baseline;
         padding: 2.4rem 0;
-        border-bottom: 1px solid #efefef;
+        border-bottom: 1px solid var(--text-grey);
 
         @include breakpoint(mobile) {
             padding: 1.8rem 0;
