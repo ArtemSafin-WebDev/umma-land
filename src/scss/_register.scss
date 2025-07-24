@@ -41,13 +41,13 @@
 }
 
 .register__heading {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 2rem;
         font-weight: 500;
         padding-bottom: 2rem;
-        border-bottom: 1px solid #313131;
+        border-bottom: 1px solid var(--text-color);
         margin-bottom: 2.4rem;
     }
 }
@@ -122,7 +122,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 2.4rem;
-    border-top: 1px solid #a8a8a8;
+    border-top: 1px solid var(--text-grey);
 
     @include breakpoint(mobile) {
         padding-top: 3rem;
@@ -136,14 +136,9 @@
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.2;
-    color: #313131;
 
     @include breakpoint(mobile) {
         margin-bottom: 3rem;
-    }
-    &:link,
-    &:visited {
-        color: #313131;
     }
 
     &:hover {
@@ -175,21 +170,15 @@
 }
 
 .register__account-nav-link {
-    color: #313131;
-
     font-size: 1.4rem;
     line-height: 2rem;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s;
     display: inline;
-    &:link,
-    &:visited {
-        color: #313131;
-    }
 
     &:hover,
     .register__account-nav-list-item.active & {
-        border-color: black;
+        border-color: var(--text-color);
     }
 }
 
@@ -216,7 +205,7 @@
         text-align: left;
 
         font-weight: 400;
-        color: #313131;
+        color: var(--text-color);
     }
 
     td {
@@ -251,14 +240,14 @@
     }
 
     th {
-        color: #313131;
+        color: var(--text-color);
     }
 
     th,
     td {
         width: 20%;
         flex-grow: 1;
-        color: #2a2a2a;
+        color: var(--text-color);
         font-weight: 400;
         text-align: left;
     }
@@ -272,7 +261,7 @@
 
         tr {
             padding-bottom: 1.6rem;
-            border-bottom: 1px solid #313131;
+            border-bottom: 1px solid var(--text-color);
             padding-top: 2.4rem;
             display: flex;
             align-items: baseline;
@@ -456,19 +445,19 @@
 .register__my-orders-link {
     display: inline-flex;
     align-items: center;
-    color: #808080;
+    color: var(--text-grey);
 
     svg {
         width: 0.6rem;
         height: 1.2rem;
-        fill: #1d2734;
+        fill: var(--text-color);
         margin-left: 1.2rem;
         position: relative;
         bottom: -0.1rem;
     }
     &:link,
     &:visited {
-        color: #808080;
+        color: var(--text-grey);
     }
 
     &:hover {
@@ -491,8 +480,8 @@
     justify-content: center;
 
     .no-touch &:hover {
-        background-color: #181818;
-        border-color: #181818;
+        background-color: var(--text-color);
+        border-color: var(--text-color);
         color: white;
     }
 }
@@ -536,7 +525,7 @@
 
     font-size: 1.4rem;
     line-height: 2rem;
-    color: #313131;
+
     border-bottom: 1px solid #efefef;
     padding: 2.4rem 0;
 
@@ -616,7 +605,7 @@
     font-size: 1.4rem;
     line-height: 1.2rem;
     padding: 1.7rem 3.6rem;
-    background-color: #181818;
+    background-color: var(--text-color);
     color: white;
     font-weight: 500;
     text-align: center;
@@ -633,7 +622,7 @@
 .register__return-datetime-remark {
     font-size: 1.4rem;
     line-height: 2rem;
-    color: #808080;
+    color: var(--text-grey);
     max-width: 28rem;
     margin-top: 0.6rem;
 }
@@ -650,7 +639,7 @@
 .register__return-next-steps-heading {
     font-size: 1.8rem;
     line-height: 2rem;
-    color: #313131;
+
     margin-bottom: 3rem;
     font-weight: 500;
 }
@@ -716,7 +705,7 @@
 }
 
 .register__return-next-steps-card-title {
-    color: #313131;
+    color: var(--text-color);
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 2rem;
@@ -724,7 +713,7 @@
 }
 
 .register__return-next-steps-card-text {
-    color: #323232;
+    color: var(--text-color);
     font-size: 1.4rem;
     line-height: 2rem;
     margin-bottom: 2.5rem;
@@ -842,7 +831,7 @@
 
 .register__address-book-checkbox-text,
 .register__address-book-checkbox-remark {
-    color: #808080;
+    color: var(--text-grey);
     font-size: 1.4rem;
     line-height: 2rem;
     margin-right: 0.5rem;

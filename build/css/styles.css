@@ -6570,7 +6570,7 @@ select:-webkit-autofill:focus {
 }
 
 .register__heading {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 @media only screen and (max-width: 640px) {
   .register__heading {
@@ -6578,7 +6578,7 @@ select:-webkit-autofill:focus {
     line-height: 2rem;
     font-weight: 500;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #313131;
+    border-bottom: 1px solid var(--text-color);
     margin-bottom: 2.4rem;
   }
 }
@@ -6667,7 +6667,7 @@ select:-webkit-autofill:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 2.4rem;
-  border-top: 1px solid #a8a8a8;
+  border-top: 1px solid var(--text-grey);
 }
 @media only screen and (max-width: 640px) {
   .register__btns {
@@ -6689,15 +6689,11 @@ select:-webkit-autofill:focus {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.2;
-  color: #313131;
 }
 @media only screen and (max-width: 640px) {
   .register__forgot-password {
     margin-bottom: 3rem;
   }
-}
-.register__forgot-password:link, .register__forgot-password:visited {
-  color: #313131;
 }
 .register__forgot-password:hover {
   text-decoration: underline;
@@ -6736,7 +6732,6 @@ select:-webkit-autofill:focus {
 }
 
 .register__account-nav-link {
-  color: #313131;
   font-size: 1.4rem;
   line-height: 2rem;
   border-bottom: 1px solid transparent;
@@ -6744,11 +6739,8 @@ select:-webkit-autofill:focus {
   transition: border-color 0.2s;
   display: inline;
 }
-.register__account-nav-link:link, .register__account-nav-link:visited {
-  color: #313131;
-}
 .register__account-nav-link:hover, .register__account-nav-list-item.active .register__account-nav-link {
-  border-color: black;
+  border-color: var(--text-color);
 }
 
 .register__account-info {
@@ -6775,7 +6767,7 @@ select:-webkit-autofill:focus {
   line-height: 2rem;
   text-align: left;
   font-weight: 400;
-  color: #313131;
+  color: var(--text-color);
 }
 .register__account-info td {
   text-transform: uppercase;
@@ -6811,7 +6803,7 @@ select:-webkit-autofill:focus {
   display: block;
 }
 .register__my-orders th {
-  color: #313131;
+  color: var(--text-color);
 }
 .register__my-orders th,
 .register__my-orders td {
@@ -6819,7 +6811,7 @@ select:-webkit-autofill:focus {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  color: #2a2a2a;
+  color: var(--text-color);
   font-weight: 400;
   text-align: left;
 }
@@ -6830,7 +6822,7 @@ select:-webkit-autofill:focus {
 }
 .register__my-orders thead tr {
   padding-bottom: 1.6rem;
-  border-bottom: 1px solid #313131;
+  border-bottom: 1px solid var(--text-color);
   padding-top: 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7020,18 +7012,18 @@ select:-webkit-autofill:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #808080;
+  color: var(--text-grey);
 }
 .register__my-orders-link svg {
   width: 0.6rem;
   height: 1.2rem;
-  fill: #1d2734;
+  fill: var(--text-color);
   margin-left: 1.2rem;
   position: relative;
   bottom: -0.1rem;
 }
 .register__my-orders-link:link, .register__my-orders-link:visited {
-  color: #808080;
+  color: var(--text-grey);
 }
 .register__my-orders-link:hover {
   color: var(--text-color);
@@ -7060,8 +7052,8 @@ select:-webkit-autofill:focus {
           justify-content: center;
 }
 .no-touch .register__my-orders-return-btn:hover {
-  background-color: #181818;
-  border-color: #181818;
+  background-color: var(--text-color);
+  border-color: var(--text-color);
   color: white;
 }
 
@@ -7109,7 +7101,6 @@ select:-webkit-autofill:focus {
           justify-content: space-between;
   font-size: 1.4rem;
   line-height: 2rem;
-  color: #313131;
   border-bottom: 1px solid #efefef;
   padding: 2.4rem 0;
 }
@@ -7194,7 +7185,7 @@ select:-webkit-autofill:focus {
   font-size: 1.4rem;
   line-height: 1.2rem;
   padding: 1.7rem 3.6rem;
-  background-color: #181818;
+  background-color: var(--text-color);
   color: white;
   font-weight: 500;
   text-align: center;
@@ -7215,7 +7206,7 @@ select:-webkit-autofill:focus {
 .register__return-datetime-remark {
   font-size: 1.4rem;
   line-height: 2rem;
-  color: #808080;
+  color: var(--text-grey);
   max-width: 28rem;
   margin-top: 0.6rem;
 }
@@ -7233,7 +7224,6 @@ select:-webkit-autofill:focus {
 .register__return-next-steps-heading {
   font-size: 1.8rem;
   line-height: 2rem;
-  color: #313131;
   margin-bottom: 3rem;
   font-weight: 500;
 }
@@ -7317,7 +7307,7 @@ select:-webkit-autofill:focus {
 }
 
 .register__return-next-steps-card-title {
-  color: #313131;
+  color: var(--text-color);
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2rem;
@@ -7325,7 +7315,7 @@ select:-webkit-autofill:focus {
 }
 
 .register__return-next-steps-card-text {
-  color: #323232;
+  color: var(--text-color);
   font-size: 1.4rem;
   line-height: 2rem;
   margin-bottom: 2.5rem;
@@ -7478,7 +7468,7 @@ select:-webkit-autofill:focus {
 
 .register__address-book-checkbox-text,
 .register__address-book-checkbox-remark {
-  color: #808080;
+  color: var(--text-grey);
   font-size: 1.4rem;
   line-height: 2rem;
   margin-right: 0.5rem;
@@ -7589,7 +7579,7 @@ select:-webkit-autofill:focus {
   left: 1.8rem;
   font-size: 1.4rem;
   line-height: 1.2;
-  top: 1.9rem;
+  top: 2rem;
   pointer-events: none;
   -webkit-transform-origin: left top;
           transform-origin: left top;
@@ -7805,6 +7795,8 @@ select:-webkit-autofill:focus {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 .account-submit:link, .account-submit:visited {
   color: var(--text-color);
@@ -7813,6 +7805,16 @@ select:-webkit-autofill:focus {
   .account-submit:hover {
     background-color: var(--text-color);
     color: white;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .account-submit {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 1.6rem 3.2rem;
+    border: 1px solid var(--text-color);
   }
 }
 
