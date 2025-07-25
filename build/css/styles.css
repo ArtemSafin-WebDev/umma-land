@@ -7466,7 +7466,7 @@ select:-webkit-autofill:focus {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   border: 1px solid var(--text-color);
-  margin-right: 1.2rem;
+  margin-right: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7500,10 +7500,10 @@ select:-webkit-autofill:focus {
 .register__address-book-checkbox-text,
 .register__address-book-checkbox-remark {
   color: var(--text-grey);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 2rem;
   margin-right: 0.5rem;
-  font-weight: 500;
+  font-weight: 400;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
@@ -7519,7 +7519,7 @@ select:-webkit-autofill:focus {
 }
 
 .register__address-book-checkbox-input:checked ~ .register__address-book-card-border {
-  border-color: black;
+  border-color: var(--text-color);
 }
 
 .register__address-book-checkbox-input:checked ~ .register__address-book-checkbox .register__address-book-checkbox-mark::before {
@@ -7537,28 +7537,45 @@ select:-webkit-autofill:focus {
 }
 
 .register__address-book-submit {
-  font-size: 1.4rem;
-  line-height: 1.2rem;
-  padding: 1.7rem 3.6rem;
-  background-color: #181818;
-  color: white;
-  font-weight: 500;
-  text-align: center;
+  padding: 1.6rem 3.2rem;
+  border: 0.2rem solid var(--text-color);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   text-align: center;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-top: 5rem;
+  margin-top: 4rem;
+  color: var(--text-color);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 35.4rem;
+  -webkit-transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .register__address-book-submit:link, .register__address-book-submit:visited {
-  color: white;
+  color: var(--text-color);
+}
+@media (hover: hover) and (pointer: fine) {
+  .register__address-book-submit:hover {
+    background-color: var(--text-color);
+    color: white;
+  }
 }
 @media only screen and (max-width: 640px) {
   .register__address-book-submit {
     display: block;
     width: 100%;
+    border: 1px solid var(--text-color);
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
 }
 
