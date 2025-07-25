@@ -182,7 +182,7 @@
 }
 
 .checkout__status {
-    margin-bottom: 6rem;
+    margin-bottom: 5.4rem;
 }
 
 .checkout__status-stages-names {
@@ -240,14 +240,14 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            width: 2.4rem;
-            height: 2.4rem;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             z-index: 20;
-            background-color: #000;
+            background-color: var(--text-color);
             background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.93 8.3'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M11.63.3a1,1,0,0,0-1.42,0h0L4.59,5.93l-3-2.63a1,1,0,0,0-1.4.21,1,1,0,0,0,0,1.21L3.92,8A1,1,0,0,0,5.33,8l.14-.16.16-.13,6-6a1,1,0,0,0,0-1.42Z' /%3E%3C/svg%3E");
             background-position: center;
-            background-size: 1.2rem 0.8rem;
+            background-size: 0.8rem 0.8rem;
             background-repeat: no-repeat;
         }
     }
@@ -475,12 +475,15 @@
 }
 
 .checkout__form-submit-wrapper {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 3.2rem;
     margin-top: 3rem;
 
     @include breakpoint(mobile) {
+        display: flex;
         flex-direction: column;
+        gap: 3rem;
         justify-content: initial;
     }
 }
@@ -505,6 +508,19 @@
         }
     }
 
+    &--blue {
+        width: auto;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        text-transform: uppercase;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: var(--primary-color);
+                color: white;
+            }
+        }
+    }
+
     @include breakpoint(mobile) {
         width: auto;
         border: 1px solid var(--text-color);
@@ -513,6 +529,7 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        color: var(--text-color);
     }
 }
 
@@ -530,6 +547,11 @@
     }
 }
 
+.checkout__form {
+    display: flex;
+    flex-direction: column;
+}
+
 .checkout__form-delivery {
     margin-bottom: 6rem;
 
@@ -541,28 +563,28 @@
 .checkout__form-back-link {
     display: inline-flex;
     align-items: center;
-
-    font-size: 1.4rem;
-    color: #808080;
-    margin-right: auto;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--text-grey);
+    justify-self: flex-start;
     &:link,
     &:visited {
-        color: #808080;
-    }
-
-    .no-touch &:hover {
-        color: black;
+        color: var(--text-grey);
     }
     svg {
-        width: 0.6rem;
+        width: 1.2rem;
         height: 1.2rem;
         flex-shrink: 0;
-        fill: #1d2734;
+        fill: currentColor;
         margin-right: 1rem;
     }
 
-    @include breakpoint(mobile) {
-        margin-bottom: 3rem;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: var(--text-color);
+        }
     }
 }
 
@@ -579,7 +601,6 @@
     border: 1px solid var(--text-grey);
     font-size: 1.4rem;
     line-height: 2rem;
-
     color: var(--text-grey);
     transition: color 0.2s, border-color 0.2s;
 }
@@ -602,7 +623,7 @@
         display: block;
         width: 1rem;
         height: 1rem;
-        background-color: #000;
+        background-color: var(--text-color);
         pointer-events: none;
         transition: opacity 0.2s;
         opacity: 0;
@@ -626,8 +647,8 @@
 }
 
 .checkout__form-payment-checkbox-input:checked ~ .checkout__form-payment-checkbox-content {
-    border-color: black;
-    color: black;
+    border-color: var(--text-color);
+    color: var(--text-color);
 
     .checkout__form-payment-checkbox-mark::before {
         opacity: 1;

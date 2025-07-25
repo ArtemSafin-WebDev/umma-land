@@ -1636,311 +1636,299 @@
             </header>            <main class="page-main">
 
 
-<section class="checkout">
-    <div class="container">
-        <form class="checkout__row" action="/" method="POST" data-need-validation>
-            <div class="checkout__left-col">
-                <div class="checkout__status">
-                    <div class="checkout__status-stages-names">
-                        <div class="checkout__status-stages-name checkout__status-stages-name--filled">
-                            Информация
+        <section class="checkout">
+            <div class="container">
+                <form class="checkout__row" action="/" method="POST" data-need-validation>
+                    <div class="checkout__left-col">
+                        <div class="checkout__status">
+                            <div class="checkout__status-stages-names">
+                                <div class="checkout__status-stages-name checkout__status-stages-name--filled">
+                                    Информация
+                                </div>
+                                <div class="checkout__status-stages-name checkout__status-stages-name--filled">
+                                    Доставка и оплата
+                                </div>
+                            </div>
+                            <div class="checkout__status-indicators">
+                                <div
+                                    class="checkout__status-indicator-circle checkout__status-indicator-circle--filled checkout__status-indicator-circle--passed">
+
+                                </div>
+                                <div class="checkout__status-indicator-bar checkout__status-indicator-bar--filled">
+
+                                </div>
+                                <div
+                                    class="checkout__status-indicator-circle checkout__status-indicator-circle--filled">
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="checkout__status-stages-name checkout__status-stages-name--filled">
-                            Доставка и оплата
+                        <div class="checkout__form">
+                            <div class="checkout__form-delivery">
+                                <h2 class="checkout__form-heading">
+                                    Данные покупателя
+                                </h2>
+                                <div class="checkout__form-user-info-row">
+                                    <div class="checkout__form-user-info-col">
+                                        <label class="checkout__form-delivery-checkbox">
+                                            <input type="radio" name="delivery"
+                                                class="checkout__form-delivery-checkbox-input" checked>
+                                            <span class="checkout__form-delivery-checkbox-content">
+                                                <span class="checkout__form-delivery-checkbox-content-type">
+                                                    <span class="checkout__form-delivery-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="checkout__form-delivery-checkbox-content-type-text">
+                                                        Курьером по городу
+                                                    </span>
+                                                </span>
+                                                <span class="checkout__form-delivery-checkbox-content-address">
+                                                    1 000 Р
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkout__form-user-info-col">
+                                        <label class="checkout__form-delivery-checkbox">
+                                            <input type="radio" name="delivery"
+                                                class="checkout__form-delivery-checkbox-input" checked>
+                                            <span class="checkout__form-delivery-checkbox-content">
+                                                <span class="checkout__form-delivery-checkbox-content-type">
+                                                    <span class="checkout__form-delivery-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="checkout__form-delivery-checkbox-content-type-text">
+                                                        Самовывоз
+                                                    </span>
+                                                </span>
+                                                <span class="checkout__form-delivery-checkbox-content-address">
+                                                    Бесплатно
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="checkout__form-payment">
+                                <h2 class="checkout__form-heading">
+                                    Способ оплаты
+                                </h2>
+                                <div class="checkout__form-user-info-row">
+                                    <div class="checkout__form-user-info-col">
+                                        <label class="checkout__form-payment-checkbox">
+
+                                            <input type="radio" name="payment" value="card"
+                                                class="checkout__form-payment-checkbox-input" checked>
+                                            <span class="checkout__form-payment-checkbox-content">
+
+
+                                                <span class="checkout__form-payment-checkbox-mark">
+
+                                                </span>
+                                                <span class="checkout__form-payment-checkbox-text">
+                                                    Банковской картой
+                                                </span>
+                                                <img src="img/cards.jpg" alt=""
+                                                    class="checkout__form-payment-checkbox-image">
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkout__form-user-info-col">
+                                        <label class="checkout__form-payment-checkbox">
+
+                                            <input type="radio" name="payment" value="cash"
+                                                class="checkout__form-payment-checkbox-input">
+                                            <span class="checkout__form-payment-checkbox-content">
+                                                <span class="checkout__form-payment-checkbox-mark">
+
+                                                </span>
+                                                <span class="checkout__form-payment-checkbox-text">
+                                                    Наличными
+                                                </span>
+                                                <span class="checkout__form-payment-checkbox-secondary-text">
+                                                    При получении
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="checkout__form-submit-wrapper">
+                                <a href="#" class="checkout__form-back-link">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-left">
+                                        <use xlink:href="#arrow-left"></use>
+                                    </svg>
+                                    Информация
+                                </a>
+                                <button class="checkout__form-submit checkout__form-submit--blue" type="submit">
+                                    Оплатить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="checkout__rules">
+                            <ul class="account-list">
+                                <li class="account-list-item">
+                                    <div class="account-list-card">
+                                        Интернет магазин OUTPAC работает согласно российскому законодательству. В нашем
+                                        интернет магазине, Вы можете обменять любое приобретенное изделие.
+                                    </div>
+
+                                </li>
+                                <li class="account-list-item">
+                                    <div class="account-list-card">
+                                        Гарантия безпроблемного возврата в течении 30 дней
+                                    </div>
+
+                                </li>
+                                <li class="account-list-item">
+                                    <div class="account-list-card">
+                                        Гарантия качества покупки. Гарантия 3 месяца
+                                    </div>
+
+                                </li>
+                                <li class="account-list-item">
+                                    <div class="account-list-card">
+                                        Ваши права защищены
+                                    </div>
+
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="checkout__status-indicators">
-                        <div
-                            class="checkout__status-indicator-circle checkout__status-indicator-circle--filled checkout__status-indicator-circle--passed">
+                    <div class="checkout__right-col">
+                        <div class="checkout__cart-wrapper">
+                            <h2 class="account-heading checkout__heading">
+                                Корзина
+                            </h2>
+                            <div class="checkout__cart">
+                                <ul class="checkout__cart-list">
+                                    <li class="checkout__cart-list-item">
+                                        <div class="checkout__cart-card">
+                                            <div class="checkout__cart-card-image-container">
 
-                        </div>
-                        <div class="checkout__status-indicator-bar checkout__status-indicator-bar--filled">
+                                            </div>
+                                            <div class="checkout__cart-card-content">
+                                                <div class="checkout__cart-card-info">
+                                                    <h4 class="checkout__cart-card-title">
+                                                        Город и горы.<br>
+                                                        Следы на снегу.
+                                                    </h4>
 
-                        </div>
-                        <div class="checkout__status-indicator-circle checkout__status-indicator-circle--filled">
+                                                    <div class="checkout__cart-card-quantity">
+                                                        <select name="quantity" class="js-custom-select">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout__cart-card-price">
+                                                    <div class="checkout__cart-card-price-old">
+                                                        14 290 P
+                                                    </div>
+                                                    <div class="checkout__cart-card-price-new">
+                                                        7 145 P
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="checkout__form">
-                    <div class="checkout__form-delivery">
-                        <h2 class="checkout__form-heading">
-                            Данные покупателя
-                        </h2>
-                        <div class="checkout__form-user-info-row">
-                            <div class="checkout__form-user-info-col">
-                                <label class="checkout__form-delivery-checkbox">
-                                    <input type="radio" name="delivery" class="checkout__form-delivery-checkbox-input"
-                                        checked>
-                                    <span class="checkout__form-delivery-checkbox-content">
-                                        <span class="checkout__form-delivery-checkbox-content-type">
-                                            <span class="checkout__form-delivery-checkbox-mark">
+                                        </div>
+                                    </li>
+                                    <li class="checkout__cart-list-item">
+                                        <div class="checkout__cart-card">
+                                            <div class="checkout__cart-card-image-container">
 
-                                            </span>
-                                            <span class="checkout__form-delivery-checkbox-content-type-text">
-                                                Курьером по городу
-                                            </span>
-                                        </span>
-                                        <span class="checkout__form-delivery-checkbox-content-address">
+                                            </div>
+                                            <div class="checkout__cart-card-content">
+                                                <div class="checkout__cart-card-info">
+                                                    <h4 class="checkout__cart-card-title">
+                                                        Город и горы.<br>
+                                                        Следы на снегу.
+                                                    </h4>
+
+                                                    <div class="checkout__cart-card-quantity">
+                                                        <select name="quantity" class="js-custom-select">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout__cart-card-price">
+                                                    14 290 ₽
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <div class="checkout__cart-totals">
+                                    <div class="checkout__cart-totals-item">
+                                        <div class="checkout__cart-totals-item-key">
+                                            Скидка
+                                        </div>
+                                        <div class="checkout__cart-totals-item-value">
+                                            - 1 000 Р
+                                        </div>
+                                    </div>
+                                    <div class="checkout__cart-totals-item">
+                                        <div class="checkout__cart-totals-item-key">
+                                            Доставка
+                                        </div>
+                                        <div class="checkout__cart-totals-item-value">
                                             1 000 Р
-                                        </span>
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="checkout__form-user-info-col">
-                                <label class="checkout__form-delivery-checkbox">
-                                    <input type="radio" name="delivery" class="checkout__form-delivery-checkbox-input"
-                                        checked>
-                                    <span class="checkout__form-delivery-checkbox-content">
-                                        <span class="checkout__form-delivery-checkbox-content-type">
-                                            <span class="checkout__form-delivery-checkbox-mark">
-
-                                            </span>
-                                            <span class="checkout__form-delivery-checkbox-content-type-text">
-                                                Самовывоз
-                                            </span>
-                                        </span>
-                                        <span class="checkout__form-delivery-checkbox-content-address">
-                                            Бесплатно
-                                        </span>
-                                    </span>
-                                </label>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="checkout__form-payment">
-                        <h2 class="checkout__form-heading">
-                            Способ оплаты
-                        </h2>
-                        <div class="checkout__form-user-info-row">
-                            <div class="checkout__form-user-info-col">
-                                <label class="checkout__form-payment-checkbox">
-
-                                    <input type="radio" name="payment" value="1"
-                                        class="checkout__form-payment-checkbox-input" checked>
-                                    <span class="checkout__form-payment-checkbox-content">
-
-
-                                        <span class="checkout__form-payment-checkbox-mark">
-
-                                        </span>
-                                        <span class="checkout__form-payment-checkbox-text">
-                                            Банковской картой
-                                        </span>
-                                        <img src="img/cards.jpg" alt="" class="checkout__form-payment-checkbox-image">
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="checkout__form-user-info-col">
-                                <label class="checkout__form-payment-checkbox">
-
-                                    <input type="radio" name="payment" value="1"
-                                        class="checkout__form-payment-checkbox-input">
-                                    <span class="checkout__form-payment-checkbox-content">
-                                        <span class="checkout__form-payment-checkbox-mark">
-
-                                        </span>
-                                        <span class="checkout__form-payment-checkbox-text">
-                                            Банковской картой
-                                        </span>
-                                        <span class="checkout__form-payment-checkbox-secondary-text">
-                                            При получении
-                                        </span>
-                                    </span>
-                                </label>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="checkout__form-submit-wrapper">
-                        <a href="#" class="checkout__form-back-link">
-                            <svg width="16" height="16" aria-hidden="true" class="icon-arrow-left">
-                                <use xlink:href="#arrow-left"></use>
-                            </svg>
-                            Информация
-                        </a>
-                        <button class="checkout__form-submit" type="submit">
-                            Оплатить
-                        </button>
-                    </div>
-                </div>
-                <div class="checkout__rules">
-                    <ul class="account-list">
-                        <li class="account-list-item">
-                            <div class="account-list-card">
-                                Интернет магазин OUTPAC работает согласно российскому законодательству. В нашем
-                                интернет магазине, Вы можете обменять любое приобретенное изделие.
-                            </div>
-
-                        </li>
-                        <li class="account-list-item">
-                            <div class="account-list-card">
-                                Гарантия безпроблемного возврата в течении 30 дней
-                            </div>
-
-                        </li>
-                        <li class="account-list-item">
-                            <div class="account-list-card">
-                                Гарантия качества покупки. Гарантия 3 месяца
-                            </div>
-
-                        </li>
-                        <li class="account-list-item">
-                            <div class="account-list-card">
-                                Ваши права защищены
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="checkout__right-col">
-                <div class="checkout__cart-wrapper">
-                    <h2 class="account-heading checkout__heading">
-                        Корзина
-                    </h2>
-                    <div class="checkout__cart">
-                        <ul class="checkout__cart-list">
-                            <li class="checkout__cart-list-item">
-                                <div class="checkout__cart-card">
-                                    <div class="checkout__cart-card-image-container">
-                                        <img src="img/checkout/cart-1.jpg" alt="" class="checkout__cart-card-image">
-                                    </div>
-                                    <div class="checkout__cart-card-content">
-                                        <div class="checkout__cart-card-info">
-                                            <h4 class="checkout__cart-card-title">
-                                                Nike Air Max 98
-                                            </h4>
-                                            <div class="checkout__cart-card-color">
-                                                Бежевый
-                                            </div>
-                                            <div class="checkout__cart-card-specs">
-                                                EU 42 | US 9 | UK 8 | x1
-                                            </div>
-                                        </div>
-                                        <div class="checkout__cart-card-price">
-                                            14 290 P
                                         </div>
                                     </div>
-
-                                </div>
-                            </li>
-                            <li class="checkout__cart-list-item">
-                                <div class="checkout__cart-card">
-                                    <div class="checkout__cart-card-image-container">
-                                        <img src="img/checkout/cart-2.jpg" alt="" class="checkout__cart-card-image">
-                                    </div>
-                                    <div class="checkout__cart-card-content">
-                                        <div class="checkout__cart-card-info">
-                                            <h4 class="checkout__cart-card-title">
-                                                Nike Air Max 98
-                                            </h4>
-                                            <div class="checkout__cart-card-color">
-                                                Бежевый
-                                            </div>
-                                            <div class="checkout__cart-card-specs">
-                                                EU 42 | US 9 | UK 8 | x1
-                                            </div>
+                                    <div class="checkout__cart-totals-item">
+                                        <div class="checkout__cart-totals-item-key">
+                                            <strong>
+                                                Итого к оплате:
+                                            </strong>
                                         </div>
-                                        <div class="checkout__cart-card-price">
-                                            <div class="checkout__cart-card-price-old">
+                                        <div class="checkout__cart-totals-item-value">
+                                            <strong>
                                                 14 290 P
-                                            </div>
-                                            <div class="checkout__cart-card-price-new">
-                                                7 145 P
-                                            </div>
-
+                                            </strong>
                                         </div>
                                     </div>
-
-                                </div>
-                            </li>
-                            <li class="checkout__cart-list-item">
-                                <div class="checkout__cart-card">
-                                    <div class="checkout__cart-card-image-container">
-                                        <img src="img/checkout/cart-2.jpg" alt="" class="checkout__cart-card-image">
-                                    </div>
-                                    <div class="checkout__cart-card-content">
-                                        <div class="checkout__cart-card-info">
-                                            <h4 class="checkout__cart-card-title">
-                                                Nike Air Max 98
-                                            </h4>
-                                            <div class="checkout__cart-card-color">
-                                                Бежевый
-                                            </div>
-                                            <div class="checkout__cart-card-specs">
-                                                EU 42 | US 9 | UK 8 | x1
-                                            </div>
-                                        </div>
-                                        <div class="checkout__cart-card-price">
-                                            14 290 P
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="checkout__cart-totals">
-                            <div class="checkout__cart-totals-item">
-                                <div class="checkout__cart-totals-item-key">
-                                    Скидка
-                                </div>
-                                <div class="checkout__cart-totals-item-value">
-                                    - 1 000 Р
                                 </div>
                             </div>
-                            <div class="checkout__cart-totals-item">
-                                <div class="checkout__cart-totals-item-key">
-                                    Доставка
-                                </div>
-                                <div class="checkout__cart-totals-item-value">
-                                    1 000 Р
-                                </div>
-                            </div>
-                            <div class="checkout__cart-totals-item">
-                                <div class="checkout__cart-totals-item-key">
-                                    <strong>
-                                        Сумма к оплате:
-                                    </strong>
-                                </div>
-                                <div class="checkout__cart-totals-item-value">
-                                    <strong>
-                                        14 290 P
-                                    </strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="checkout__use-promo">
-                        <label class="account-checkbox checkout__use-promo-checkbox">
-                            <input type="checkbox" class="account-checkbox-input" id="promo-required">
-                            <span class="account-checkbox-mark">
+                            <div class="checkout__use-promo">
+                                <label class="account-checkbox checkout__use-promo-checkbox">
+                                    <input type="checkbox" class="account-checkbox-input" id="promo-required">
+                                    <span class="account-checkbox-mark">
 
-                            </span>
-                            <span class="account-checkbox-text">
-                                Использовать промокод
-                            </span>
-                        </label>
-                        <div class="checkout__use-promo-input">
-                            <div class="account-input-wrapper">
-
-                                <input type="text" class="account-input" id="promo" placeholder="Введите промокод"
-                                    data-parsley-required-if-checked="#promo-required" data-parsley-validate-if-empty>
-                                <label class="account-label" for="promo">
-                                    Введите промокод
+                                    </span>
+                                    <span class="account-checkbox-text">
+                                        Использовать промокод
+                                    </span>
                                 </label>
+                                <div class="checkout__use-promo-input">
+                                    <div class="account-input-wrapper">
+
+                                        <input type="text" class="account-input" id="promo"
+                                            placeholder="Введите промокод"
+                                            data-parsley-required-if-checked="#promo-required"
+                                            data-parsley-validate-if-empty>
+                                        <label class="account-label" for="promo">
+                                            Введите промокод
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-                </div>
+                </form>
 
-            </div>
-        </form>
-
-        </form>
-</section>
+                </form>
+        </section>
 
             </main>
             <footer class="page-footer">
