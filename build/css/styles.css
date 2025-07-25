@@ -3430,7 +3430,7 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (max-width: 640px) {
   .page-footer__row {
-    border-top: 1px solid #efefef;
+    border-top: 1px solid var(--text-grey);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -6827,10 +6827,14 @@ select:-webkit-autofill:focus {
   font-weight: 400;
   text-align: left;
 }
-.register__my-orders thead th {
-  font-size: 1.4rem;
-  line-height: 2rem;
+.register__my-orders strong {
   font-weight: 500;
+}
+.register__my-orders thead th {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
 }
 .register__my-orders thead tr {
   padding-bottom: 1.6rem;
@@ -6848,7 +6852,7 @@ select:-webkit-autofill:focus {
   display: -ms-flexbox;
   display: flex;
   padding: 4.5rem 0;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid var(--text-grey);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6888,11 +6892,11 @@ select:-webkit-autofill:focus {
   width: 23rem;
 }
 .register__my-orders--order tbody tr {
-  padding: 3.2rem 0;
+  padding: 3rem 0;
 }
 
 .register__my-orders-mobile-list-item {
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid var(--text-grey);
 }
 .register__my-orders-mobile-list-item:last-child {
   border-bottom: none;
@@ -6900,7 +6904,7 @@ select:-webkit-autofill:focus {
 .register__my-orders-mobile-list-item--order {
   border: none;
   margin-bottom: 5rem;
-  border-top: 1px solid #efefef;
+  border-top: 1px solid var(--text-grey);
 }
 .register__my-orders-mobile-list-item--order:last-child {
   margin-bottom: 0;
@@ -6938,7 +6942,7 @@ select:-webkit-autofill:focus {
   top: 0;
   width: 1.6rem;
   height: 1.6rem;
-  border: 1px solid #efefef;
+  border: 1px solid var(--text-grey);
   background-color: #f6f6f6;
   border-radius: 50%;
 }
@@ -6948,9 +6952,19 @@ select:-webkit-autofill:focus {
 
 .register__my-orders-mobile-card-image-container {
   width: 7rem;
-  height: 8rem;
+  height: 9rem;
   position: relative;
   margin-right: 2.4rem;
+  background: var(--text-color);
+}
+.register__my-orders-mobile-card-image-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .register__my-orders-mobile-card-content {
@@ -6959,34 +6973,46 @@ select:-webkit-autofill:focus {
       -ms-flex-positive: 1;
           flex-grow: 1;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.3rem;
   padding-right: 3rem;
-}
-
-.register__my-orders-mobile-card-image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  font-family: "object-fit: cover; object-position: center;";
 }
 
 .register__my-orders-mobile-card-title,
 .register__my-orders-mobile-card-date,
 .register__my-orders-mobile-card-price {
-  font-size: 1.4rem;
-  margin-bottom: 0.3rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: normal;
   margin-right: 2.4rem;
+}
+@media only screen and (max-width: 640px) {
+  .register__my-orders-mobile-card-title,
+  .register__my-orders-mobile-card-date,
+  .register__my-orders-mobile-card-price {
+    font-size: 1.4rem;
+  }
 }
 .register__my-orders-mobile-card-title:last-child,
 .register__my-orders-mobile-card-date:last-child,
 .register__my-orders-mobile-card-price:last-child {
   margin-bottom: 0;
+}
+
+.register__my-orders-mobile-card-title,
+.register__my-orders-mobile-card-price {
+  font-weight: 500;
+}
+@media only screen and (max-width: 640px) {
+  .register__my-orders-mobile-card-title,
+  .register__my-orders-mobile-card-price {
+    font-weight: 400;
+  }
 }
 
 .register__my-orders-status {
@@ -7048,13 +7074,13 @@ select:-webkit-autofill:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-size: 1.4rem;
+  line-height: normal;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 1.3rem 1.6rem;
+  padding: 1rem 1.4rem;
   text-align: center;
-  border: 1px solid #e2e2e2;
+  border: 1px solid var(--text-grey);
   width: 100%;
   -webkit-transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -7062,19 +7088,22 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  white-space: nowrap;
 }
-.no-touch .register__my-orders-return-btn:hover {
-  background-color: var(--text-color);
-  border-color: var(--text-color);
-  color: white;
+@media (hover: hover) and (pointer: fine) {
+  .register__my-orders-return-btn:hover {
+    background-color: var(--text-color);
+    border-color: var(--text-color);
+    color: white;
+  }
 }
 
 .register__rules {
-  margin-top: 12rem;
+  margin-top: 8.5rem;
 }
 @media only screen and (max-width: 640px) {
   .register__rules {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
 }
 
@@ -7084,14 +7113,14 @@ select:-webkit-autofill:focus {
   position: relative;
 }
 .register__heading-back-link svg {
-  width: 0.8rem;
-  height: 1.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
   position: absolute;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  fill: #aeb4bb;
+  fill: currentColor;
 }
 @media only screen and (max-width: 640px) {
   .register__heading-back-link svg {
@@ -7113,11 +7142,11 @@ select:-webkit-autofill:focus {
           justify-content: space-between;
   font-size: 1.4rem;
   line-height: 2rem;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid var(--text-grey);
   padding: 2.4rem 0;
 }
 .register__my-orders-mobile-info-item:first-child {
-  border-top: 1px solid #efefef;
+  border-top: 1px solid var(--text-grey);
 }
 
 .register__my-orders-mobile-info-item-value {
@@ -7126,18 +7155,18 @@ select:-webkit-autofill:focus {
 
 .register__my-orders-mobile-make-return {
   font-size: 1.4rem;
-  line-height: 1.2rem;
-  padding: 1.7rem 2.4rem;
-  background-color: #181818;
-  color: white;
+  line-height: normal;
+  padding: 1.6rem 3.2rem;
+  border: 1px solid var(--text-color);
   font-weight: 500;
   text-align: center;
   display: block;
   width: 100%;
   margin-top: 3.2rem;
+  color: var(--text-color);
 }
 .register__my-orders-mobile-make-return:link, .register__my-orders-mobile-make-return:visited {
-  color: white;
+  color: var(--text-color);
 }
 
 .register__return {
@@ -7761,6 +7790,14 @@ select:-webkit-autofill:focus {
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -7772,7 +7809,8 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (max-width: 640px) {
   .account-list-item {
-    width: 100%;
+    width: auto;
+    margin: 0;
   }
 }
 
