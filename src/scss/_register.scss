@@ -414,6 +414,16 @@
     flex-direction: column;
     gap: 0.3rem;
     padding-right: 3rem;
+
+    @include breakpointMF(small-tablet) {
+        .register__return-product & {
+            padding-right: 0;
+            flex-direction: row;
+            gap: 2rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 }
 
 .register__my-orders-mobile-card-title,
@@ -422,6 +432,12 @@
     font-size: 1.6rem;
     line-height: normal;
     margin-right: 2.4rem;
+
+    @include breakpointMF(small-tablet) {
+        .register__return-product & {
+            margin-right: 0;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
@@ -584,23 +600,39 @@
 }
 
 .register__return {
-    max-width: 90rem;
 }
 
 .register__return-row {
+    max-width: 90rem;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+    &--wide {
+        max-width: none;
+    }
 }
 
 .register__return-heading {
-    font-size: 1.6rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    font-style: normal;
     font-weight: 500;
+    line-height: 2rem;
     margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
 }
 
 .register__return-product {
-    border-bottom: 1px solid #efefef;
-    border-top: 1px solid #efefef;
+    border-bottom: 1px solid var(--text-grey);
+    border-top: 1px solid var(--text-grey);
+
+    @include breakpoint(mobile) {
+        border-bottom: none;
+    }
 }
 
 .register__return-product-only-mobile {
@@ -614,43 +646,67 @@
     display: flex;
 
     @include breakpoint(mobile) {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 3.2rem;
+        grid-row-gap: 1.6rem;
     }
 }
 
 .register__return-datetime-col {
     margin-right: 1.6rem;
+    width: 16rem;
 
     @include breakpoint(mobile) {
-        margin-right: 0;
-        margin-bottom: 1.6rem;
+        margin: 0;
+        width: auto;
     }
 }
 
 .register__return-submit {
-    font-size: 1.4rem;
-    line-height: 1.2rem;
-    padding: 1.7rem 3.6rem;
-    background-color: var(--text-color);
-    color: white;
+    font-size: 2rem;
+    font-style: normal;
     font-weight: 500;
+    line-height: normal;
     text-align: center;
-
-    display: inline-flex;
-    text-align: center;
+    border: 0.2rem solid var(--text-color);
+    color: var(--text-color);
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     align-self: flex-start;
+    width: 35.4rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem 3.2rem;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-color: var(--text-color);
+            color: white;
+        }
+    }
+
     @include breakpoint(mobile) {
         display: block;
         width: 100%;
+        border-width: 1px;
+        font-size: 1.4rem;
+        padding: 1.5rem 2rem;
     }
 }
 
 .register__return-datetime-remark {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2rem;
     color: var(--text-grey);
-    max-width: 28rem;
-    margin-top: 0.6rem;
+    max-width: 33rem;
+    margin-top: 0.8rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 1.4rem;
+        margin: 0;
+        grid-column: 1 / -1;
+    }
 }
 
 .register__return-next-steps {
