@@ -6847,6 +6847,11 @@ select:-webkit-autofill:focus {
       -ms-flex-align: center;
           align-items: center;
 }
+.register__my-orders tbody td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .register__my-orders:not(.register__my-orders--order) .register__my-orders tbody td:nth-child(3), .register__my-orders:not(.register__my-orders--order) .register__my-orders tbody td:nth-child(4) {
   font-weight: 500;
 }
@@ -7036,7 +7041,6 @@ select:-webkit-autofill:focus {
       -ms-flex-align: center;
           align-items: center;
   color: var(--text-color);
-  font-weight: 500;
 }
 .register__my-orders-status::before {
   content: "";
@@ -7064,14 +7068,14 @@ select:-webkit-autofill:focus {
       -ms-flex-align: center;
           align-items: center;
   color: var(--text-grey);
+  margin-left: auto;
+  margin-top: 0.3rem;
 }
 .register__my-orders-link svg {
-  width: 0.6rem;
-  height: 1.2rem;
-  fill: var(--text-color);
-  margin-left: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: currentColor;
   position: relative;
-  bottom: -0.1rem;
 }
 .register__my-orders-link:link, .register__my-orders-link:visited {
   color: var(--text-grey);
