@@ -1,88 +1,165 @@
 {{#extend "layout"}}
-{{#content "main"}}
+    {{#content "main"}}
 
-<section class="register">
-    <div class="container">
-        <div class="register__row">
-            <div class="register__left-col">
-                <h2 class="account-heading register__heading">
-                    Личный кабинет
-                </h2>
-                <nav class="register__account-nav">
-                    <ul class="register__account-nav-list">
-                        <li class="register__account-nav-list-item">
-                            <a href="#" class="register__account-nav-link">
-                                Информация
+        <section class="register">
+            <div class="container">
+                <div class="register__row">
+                    <div class="register__left-col">
+                        <h2 class="account-heading register__heading">
+                            Личный кабинет
+                        </h2>
+                        <nav class="register__account-nav">
+                            <ul class="register__account-nav-list">
+                                <li class="register__account-nav-list-item">
+                                    <a href="#" class="register__account-nav-link">
+                                        Информация
+                                    </a>
+                                </li>
+                                <li class="register__account-nav-list-item">
+                                    <a href="#" class="register__account-nav-link">
+                                        Мои заказы
+                                    </a>
+                                </li>
+                                <li class="register__account-nav-list-item active">
+                                    <a href="#" class="register__account-nav-link">
+                                        Возврат товара
+                                    </a>
+                                </li>
+                                <li class="register__account-nav-list-item">
+                                    <a href="#" class="register__account-nav-link">
+                                        Адресная книга
+                                    </a>
+                                </li>
+                                <li class="register__account-nav-list-item">
+                                    <a href="#" class="register__account-nav-link">
+                                        Избранное
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="register__right-col">
+                        <h2 class="account-heading register__heading">
+                            <a href="#" class="register__heading-back-link">
+                                <svg width="16" height="16" aria-hidden="true" class="icon-arrow-left">
+                                    <use xlink:href="#arrow-left"></use>
+                                </svg>
+                                Возврат № ELR524441
                             </a>
-                        </li>
-                        <li class="register__account-nav-list-item">
-                            <a href="#" class="register__account-nav-link">
-                                Мои заказы
-                            </a>
-                        </li>
-                        <li class="register__account-nav-list-item active">
-                            <a href="#" class="register__account-nav-link">
-                                Возврат товара
-                            </a>
-                        </li>
-                        <li class="register__account-nav-list-item">
-                            <a href="#" class="register__account-nav-link">
-                                Адресная книга
-                            </a>
-                        </li>
-                        <li class="register__account-nav-list-item">
-                            <a href="#" class="register__account-nav-link">
-                                Избранное
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="register__right-col">
-                <h2 class="account-heading register__heading">
-                    <a href="#" class="register__heading-back-link">
-                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-left">
-                            <use xlink:href="#arrow-left"></use>
-                        </svg>
-                        Возврат № ELR524441
-                    </a>
-                </h2>
-                <div class="register__my-orders register__my-orders--order register__my-orders--order-return">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    Товар
-                                </th>
-                                <th>
-                                    Артикул
-                                </th>
-                                <th>
-                                    Цена
-                                </th>
-                                <th>
-                                    Дата возврата
-                                </th>
-                                <th>
-                                    Статус
-                                </th>
-                                <th>
+                        </h2>
+                        <div class="register__my-orders register__my-orders--order register__my-orders--order-return">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Товар
+                                        </th>
+                                        <th>
+                                            Артикул
+                                        </th>
+                                        <th>
+                                            Цена
+                                        </th>
+                                        <th>
+                                            Дата возврата
+                                        </th>
+                                        <th>
+                                            Статус
+                                        </th>
+                                        <th>
 
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="#"
-                                        class="register__my-orders-mobile-card register__my-orders-mobile-card--separate">
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#"
+                                                class="register__my-orders-mobile-card register__my-orders-mobile-card--separate">
+                                                <div class="register__my-orders-mobile-card-image-container">
+
+                                                </div>
+                                                <div class="register__my-orders-mobile-card-content">
+                                                    <h4 class="register__my-orders-mobile-card-title">
+                                                        Город и горы.<br>
+                                                        Следы на снегу.
+                                                    </h4>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            4635673
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                14 290 P
+                                            </strong>
+                                        </td>
+                                        <td>
+                                            23.08.2020
+                                        </td>
+                                        <td>
+                                            Обрабатывается
+                                        </td>
+                                        <td>
+                                            <a href="#"
+                                                class="register__my-orders-return-btn js-open-change-return-time">
+                                                Перенести встречу с курьером
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#"
+                                                class="register__my-orders-mobile-card register__my-orders-mobile-card--separate">
+                                                <div class="register__my-orders-mobile-card-image-container">
+
+                                                </div>
+                                                <div class="register__my-orders-mobile-card-content">
+                                                    <h4 class="register__my-orders-mobile-card-title">
+                                                        Город и горы.<br>
+                                                        Следы на снегу.
+                                                    </h4>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            4635673
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                14 290 P
+                                            </strong>
+                                        </td>
+                                        <td>
+                                            23.08.2020
+                                        </td>
+                                        <td>
+                                            Обрабатывается
+                                        </td>
+                                        <td>
+                                            <a href="#"
+                                                class="register__my-orders-return-btn js-open-change-return-time">
+                                                Перенести встречу с курьером
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="register__my-orders-mobile">
+                            <ul class="register__my-orders-mobile-list">
+                                <li
+                                    class="register__my-orders-mobile-list-item register__my-orders-mobile-list-item--order">
+                                    <a href="#" class="register__my-orders-mobile-card">
                                         <div class="register__my-orders-mobile-card-image-container">
-                                            <img src="img/checkout/cart-1.jpg" alt=""
-                                                class="register__my-orders-mobile-card-image">
+
                                         </div>
                                         <div class="register__my-orders-mobile-card-content">
                                             <h4 class="register__my-orders-mobile-card-title">
-                                                Nike Air Max 98
+                                                Город и горы.<br>
+                                                Следы на снегу.
                                             </h4>
                                             <div class="register__my-orders-mobile-card-date">
                                                 20.10.2020
@@ -90,164 +167,123 @@
                                             <div class="register__my-orders-mobile-card-price">
                                                 14 290 P
                                             </div>
+                                            <div
+                                                class="register__my-orders-mobile-card-status register__my-orders-mobile-card-status--delivered">
 
+                                            </div>
                                         </div>
                                     </a>
-                                </td>
-                                <td>
-                                    4635673
-                                </td>
-                                <td>
-                                    14 290 P
-                                </td>
-                                <td>
-                                    23.08.2020
-                                </td>
-                                <td>
-                                    Обрабатывается
-                                </td>
-                                <td>
-                                    <a href="#" class="register__my-orders-return-btn js-open-change-return-time">
+                                    <div class="register__my-orders-mobile-info">
+                                        <div class="register__my-orders-mobile-info-item">
+                                            <div class="register__my-orders-mobile-info-item-key">
+                                                Артикул
+                                            </div>
+                                            <div class="register__my-orders-mobile-info-item-value">
+                                                14635673
+                                            </div>
+                                        </div>
+                                        <div class="register__my-orders-mobile-info-item">
+                                            <div class="register__my-orders-mobile-info-item-key">
+                                                Дата доставки
+                                            </div>
+                                            <div class="register__my-orders-mobile-info-item-value">
+                                                23.08.2020
+                                            </div>
+                                        </div>
+                                        <div class="register__my-orders-mobile-info-item">
+                                            <div class="register__my-orders-mobile-info-item-key">
+                                                Статус
+                                            </div>
+                                            <div class="register__my-orders-mobile-info-item-value">
+                                                Заказ доставлен
+                                            </div>
+                                        </div>
+                                        <div class="register__my-orders-mobile-info-item">
+                                            <div class="register__my-orders-mobile-info-item-key">
+                                                Цена
+                                            </div>
+                                            <div class="register__my-orders-mobile-info-item-value">
+                                                14 290 P
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="register__my-orders-mobile-make-return js-open-change-return-time">
                                         Перенести встречу с курьером
                                     </a>
-                                </td>
-                            </tr>
+                                </li>
 
-                        </tbody>
-                    </table>
-                </div>
-                <div class="register__my-orders-mobile">
-                    <ul class="register__my-orders-mobile-list">
-                        <li class="register__my-orders-mobile-list-item register__my-orders-mobile-list-item--order">
-                            <a href="#" class="register__my-orders-mobile-card">
-                                <div class="register__my-orders-mobile-card-image-container">
-                                    <img src="img/checkout/cart-1.jpg" alt=""
-                                        class="register__my-orders-mobile-card-image">
-                                </div>
-                                <div class="register__my-orders-mobile-card-content">
-                                    <h4 class="register__my-orders-mobile-card-title">
-                                        Nike Air Max 98
-                                    </h4>
-                                    <div class="register__my-orders-mobile-card-date">
-                                        20.10.2020
-                                    </div>
-                                    <div class="register__my-orders-mobile-card-price">
-                                        14 290 P
-                                    </div>
+
+                            </ul>
+                        </div>
+                        <div class="register__return-details-docs">
+
+
+                            <ul class="register__return-next-steps-list">
+                                <li class="register__return-next-steps-item">
                                     <div
-                                        class="register__my-orders-mobile-card-status register__my-orders-mobile-card-status--delivered">
+                                        class="register__return-next-steps-card register__return-next-steps-card--long">
+                                        <div class="register__return-next-steps-card-icon-container">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-doc">
+                                                <use xlink:href="#doc"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="register__return-next-steps-card-content">
+                                            <h3 class="register__return-next-steps-card-title">
+                                                Распечатайте документы
+                                            </h3>
+                                            <div class="register__return-next-steps-card-text">
+                                                В электронном письме-подтверждении о сборе возврата вы найдете список
+                                                документов, которые необходимо передать курьеру.
+                                                Эти документы также находились внутри вашей посылки. Если вы их не
+                                                получили, вы
+                                                можете скачать их по ссылке ниже и распечатать
+                                            </div>
 
+                                        </div>
+                                        <a href="#" class="register__return-next-steps-card-btn">
+                                            Скачать документы
+                                        </a>
                                     </div>
-                                </div>
-                            </a>
-                            <div class="register__my-orders-mobile-info">
-                                <div class="register__my-orders-mobile-info-item">
-                                    <div class="register__my-orders-mobile-info-item-key">
-                                        Артикул
-                                    </div>
-                                    <div class="register__my-orders-mobile-info-item-value">
-                                        14635673
-                                    </div>
-                                </div>
-                                <div class="register__my-orders-mobile-info-item">
-                                    <div class="register__my-orders-mobile-info-item-key">
-                                        Дата доставки
-                                    </div>
-                                    <div class="register__my-orders-mobile-info-item-value">
-                                        23.08.2020
-                                    </div>
-                                </div>
-                                <div class="register__my-orders-mobile-info-item">
-                                    <div class="register__my-orders-mobile-info-item-key">
-                                        Статус
-                                    </div>
-                                    <div class="register__my-orders-mobile-info-item-value">
-                                        Заказ доставлен
-                                    </div>
-                                </div>
-                                <div class="register__my-orders-mobile-info-item">
-                                    <div class="register__my-orders-mobile-info-item-key">
-                                        Цена
-                                    </div>
-                                    <div class="register__my-orders-mobile-info-item-value">
-                                        14 290 P
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="register__my-orders-mobile-make-return js-open-change-return-time">
-                                Перенести встречу с курьером
-                            </a>
-                        </li>
-                    
+                                </li>
 
-                    </ul>
-                </div>
-                <div class="register__return-details-docs">
-
-
-                    <ul class="register__return-next-steps-list">
-                        <li class="register__return-next-steps-item">
-                            <div class="register__return-next-steps-card register__return-next-steps-card--long">
-                                <div class="register__return-next-steps-card-icon-container">
-                                    <svg width="16" height="16" aria-hidden="true" class="icon-doc">
-                                        <use xlink:href="#doc"></use>
-                                    </svg>
-                                </div>
-                                <div class="register__return-next-steps-card-content">
-                                    <h3 class="register__return-next-steps-card-title">
-                                        Распечатайте документы
-                                    </h3>
-                                    <div class="register__return-next-steps-card-text">
-                                        В электронном письме-подтверждении о сборе возврата вы найдете список
-                                        документов, которые необходимо передать курьеру.<br>
-                                        Эти документы также находились внутри вашей посылки. Если вы их не получили, вы
-                                        можете скачать их по ссылке ниже и распечатать
+                            </ul>
+                        </div>
+                        <div class="register__rules">
+                            <ul class="account-list">
+                                <li class="account-list-item">
+                                    <div class="account-list-card">
+                                        Интернет магазин OUTPAC работает согласно российскому законодательству. В нашем
+                                        интернет магазине, Вы можете обменять любое приобретенное изделие.
                                     </div>
 
-                                </div>
-                                <a href="#" class="register__return-next-steps-card-btn">
-                                    Скачать документы
-                                </a>
-                            </div>
-                        </li>
+                                </li>
+                                <li class="account-list-item">
+                                    <div class="account-list-card">
+                                        Гарантия безпроблемного возврата в течении 30 дней
+                                    </div>
 
-                    </ul>
-                </div>
-                <div class="register__rules">
-                    <ul class="account-list">
-                        <li class="account-list-item">
-                            <div class="account-list-card">
-                                Интернет магазин OUTPAC работает согласно российскому законодательству. В нашем
-                                интернет магазине, Вы можете обменять любое приобретенное изделие.
-                            </div>
+                                </li>
+                                <li class="account-list-item">
+                                    <div class="account-list-card">
+                                        Гарантия качества покупки. Гарантия 3 месяца
+                                    </div>
 
-                        </li>
-                        <li class="account-list-item">
-                            <div class="account-list-card">
-                                Гарантия безпроблемного возврата в течении 30 дней
-                            </div>
+                                </li>
+                                <li class="account-list-item">
+                                    <div class="account-list-card">
+                                        Ваши права защищены
+                                    </div>
 
-                        </li>
-                        <li class="account-list-item">
-                            <div class="account-list-card">
-                                Гарантия качества покупки. Гарантия 3 месяца
-                            </div>
-
-                        </li>
-                        <li class="account-list-item">
-                            <div class="account-list-card">
-                                Ваши права защищены
-                            </div>
-
-                        </li>
-                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-{{> change-return-time }}
+        {{> change-return-time }}
 
-{{/content}}
+    {{/content}}
 {{/extend}}
