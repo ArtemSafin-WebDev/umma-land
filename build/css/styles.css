@@ -9024,7 +9024,7 @@ select:-webkit-autofill:focus {
   text-transform: uppercase;
   font-family: var(--spektra-tekst);
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 .finished__heading .icon-finished-checkmark {
   position: absolute;
@@ -9036,14 +9036,7 @@ select:-webkit-autofill:focus {
   width: 6rem;
   height: 6rem;
 }
-@media only screen and (max-width: 640px) {
-  .finished__heading .icon-finished-checkmark {
-    position: static;
-    margin-bottom: 1rem;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
+
 @media only screen and (max-width: 640px) {
   .finished__heading {
     display: -webkit-box;
@@ -9055,8 +9048,13 @@ select:-webkit-autofill:focus {
             flex-direction: column;
     margin-bottom: 1.2rem;
   }
+  .finished__heading .icon-finished-checkmark {
+    position: static;
+    margin-bottom: 1rem;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
-
 .finished__text {
   font-size: 1.6rem;
   line-height: 2rem;
@@ -9086,38 +9084,38 @@ select:-webkit-autofill:focus {
 }
 
 .finished__order-name {
-  font-weight: 500;
   font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
   line-height: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #313131;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid var(--text-color);
+}
+@media only screen and (max-width: 640px) {
+  .finished__order-name {
+    font-size: 1.4rem;
+    line-height: normal;
+    padding-bottom: 1.8rem;
+  }
 }
 
 .finished__order-card {
-  padding: 3.2rem 0;
+  padding: 2.4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .finished__order-card-image-container {
   position: relative;
   width: 7rem;
-  height: 8rem;
+  height: 9rem;
   margin-right: 2.4rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  background: #efefef;
 }
-@media only screen and (max-width: 640px) {
-  .finished__order-card-image-container {
-    margin-right: 1.8rem;
-  }
-}
-
-.finished__order-card-image {
+.finished__order-card-image-container img {
   position: absolute;
   left: 0;
   top: 0;
@@ -9125,9 +9123,11 @@ select:-webkit-autofill:focus {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  font-family: "object-fit: cover; object-position: center;";
+}
+@media only screen and (max-width: 640px) {
+  .finished__order-card-image-container {
+    margin-right: 1.8rem;
+  }
 }
 
 .finished__order-card-content {
@@ -9138,20 +9138,27 @@ select:-webkit-autofill:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0.8rem 0;
+}
+@media only screen and (max-width: 640px) {
+  .finished__order-card-content {
+    padding: 1.2rem 0;
+  }
 }
 
 .finished__order-card-title,
 .finished__order-card-color,
 .finished__order-card-params {
-  font-size: 1.4rem;
-  line-height: 1.2;
-  margin-bottom: 0.4rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: normal;
+  font-weight: 500;
 }
-.finished__order-card-title:last-child,
-.finished__order-card-color:last-child,
-.finished__order-card-params:last-child {
-  margin-bottom: 0;
+@media only screen and (max-width: 640px) {
+  .finished__order-card-title,
+  .finished__order-card-color,
+  .finished__order-card-params {
+    font-size: 1.4rem;
+  }
 }
 
 .finished__order-card-content-inner {
@@ -9159,25 +9166,49 @@ select:-webkit-autofill:focus {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.4rem;
 }
 
 .finished__order-card-price {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   text-align: right;
-  color: black;
-  font-size: 1.4rem;
-  line-height: 1.2;
-  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: normal;
+  font-weight: 400;
+}
+@media only screen and (max-width: 640px) {
+  .finished__order-card-price {
+    font-size: 1.4rem;
+  }
 }
 
 .finished__order-card-price-old {
   margin-bottom: 0.4rem;
   text-decoration: line-through;
+  color: var(--text-grey);
+}
+
+.finished__order-card-price-new {
+  color: #f00;
+}
+
+.finished__order-list {
+  margin-bottom: 2.4rem;
 }
 
 .finished__order-list-item {
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid var(--text-grey);
+}
+.finished__order-list-item:last-child {
+  border: none;
 }
 
 .finished__totals--info {
@@ -9185,7 +9216,7 @@ select:-webkit-autofill:focus {
 }
 
 .finished__totals-item {
-  padding: 2.5rem 0;
+  padding: 2.4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9195,19 +9226,34 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 1.4rem;
-  line-height: 2rem;
-  border-top: 1px solid #efefef;
+  font-size: 1.6rem;
+  line-height: normal;
+  border-top: 1px solid var(--text-grey);
 }
-.finished__totals-item:first-child {
+@media only screen and (max-width: 640px) {
+  .finished__totals-item {
+    font-size: 1.4rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.finished__totals.finished__totals--info .finished__totals-item:last-child {
+  border-bottom: 1px solid var(--text-grey);
+}
+.finished__totals:not(.finished__totals--info) .finished__totals-item:first-child {
   border: none;
 }
 .finished__totals-item--total {
   border-color: black;
+  border-bottom: none;
 }
 
 .finished__totals-item-value {
   font-weight: 500;
+  text-transform: uppercase;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .finished__totals-item--total .finished__totals-item-key,
@@ -9215,12 +9261,19 @@ select:-webkit-autofill:focus {
   color: var(--text-color);
 }
 
+.finished__totals-item--total .finished__totals-item-key {
+  font-weight: 500;
+}
+
 .finished__order {
-  margin-bottom: 5rem;
+  padding-top: 4rem;
+  border-top: 1px dashed var(--text-grey);
+  margin-top: 6rem;
 }
 @media only screen and (max-width: 640px) {
   .finished__order {
-    margin-bottom: 2rem;
+    padding-top: 3.8rem;
+    margin-top: 3.8rem;
   }
 }
 
