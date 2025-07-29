@@ -24,905 +24,186 @@
             </div>
             <form action="/" method="POST" class="catalog__filters-dropdown-form">
                 <div class="catalog__filters-dropdown-row">
-                    <div class="catalog__filters-dropdown-categories">
-                        <div class="catalog__filters-dropdown-group">
-                            <div class="catalog__filters-accordion">
-                                <div class="catalog__filters-accordion-btn">
-                                    <h4 class="catalog__filters-dropdown-group-heading">
-                                        Категории
-                                    </h4>
-                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
-                                        <use xlink:href="#arrow-down"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog__filters-accordion-content">
-                                    <div class="catalog__filters-accordion-content-inner">
-                                        <ul class="catalog__filters-dropdown-group-list">
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input"
-                                                        name="category">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Аксесуары
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input"
-                                                        name="category">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Обувь
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input"
-                                                        name="category">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Одежда
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input"
-                                                        name="category">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Куртки
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input"
-                                                        name="category">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Рубашки трикотаж
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input"
-                                                        name="category">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Футболки
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input"
-                                                        name="category">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Сумки
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input"
-                                                        name="category">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Часы наручные
-                                                    </span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    <div class="catalog__filters-dropdown-group">
+                        <div class="catalog__filters-accordion">
+                            <div class="catalog__filters-accordion-btn">
+                                <h4 class="catalog__filters-dropdown-group-heading">
+                                    Возраст
+                                </h4>
+                                <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </div>
+                            <div class="catalog__filters-accordion-content">
+                                <div class="catalog__filters-accordion-content-inner">
+                                    <ul class="catalog__filters-dropdown-group-list">
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="age" value="Малыши (0-3)">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Малыши (0-3)
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="age" value="Дошкольники (4-6)" checked="">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Дошкольники (4-6)
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="age" value="Младшие школьники (7-10)" checked="">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Младшие школьники (7-10)
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="age" value="Подростки (11+)" checked="">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Подростки (11+)
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
-                    <div class="catalog__filters-dropdown-brands">
-                        <div class="catalog__filters-dropdown-group">
-                            <div class="catalog__filters-accordion">
-                                <div class="catalog__filters-accordion-btn">
-                                    <h4 class="catalog__filters-dropdown-group-heading">
-                                        Бренды
-                                    </h4>
-                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
-                                        <use xlink:href="#arrow-down"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog__filters-accordion-content">
-                                    <div class="catalog__filters-accordion-content-inner">
-                                        <ul
-                                            class="catalog__filters-dropdown-group-list catalog__filters-dropdown-group-list--three-col">
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Stepney Workers Club
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Nike
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Les Basics
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        YMC
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Adidas Yeezy
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Birkenstock
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Chinatown market
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Puma Select
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Kangol
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Etudes
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Asics Platinum+
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Eastpak
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Ami Paris
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        New Balance
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Napapjiri
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Woolrich
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Clarks Originals
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Malibu sandals
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Han kjobenhavn
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Reebok
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Helly Hansen
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Helas
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Vans
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Levis Made & Crafted
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Champion Reverse Weave
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Polar skate co
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Blood brother
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Carhartt WIP
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Carhartt WIP
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        C.P Company
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Stussy
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Native
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Drole de monsieur
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        The North Face
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Daily paper
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Badoutfit
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Nasaseasons
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Krakatau
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Sporty&Rich
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="brand">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Suicoke
-                                                    </span>
-                                                </label>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-
+                    <div class="catalog__filters-dropdown-group">
+                        <div class="catalog__filters-accordion">
+                            <div class="catalog__filters-accordion-btn">
+                                <h4 class="catalog__filters-dropdown-group-heading">
+                                    Автор
+                                </h4>
+                                <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
                             </div>
+                            <div class="catalog__filters-accordion-content">
+                                <div class="catalog__filters-accordion-content-inner">
+                                    <ul class="catalog__filters-dropdown-group-list">
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="author" value="Список авторов позже" disabled="">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Список авторов позже
+                                                </span>
+                                            </label>
+                                        </li>
 
-                        </div>
-
-                    </div>
-                    <div class="catalog__filters-dropdown-colors">
-
-                        <div class="catalog__filters-dropdown-group">
-                            <div class="catalog__filters-accordion">
-                                <div class="catalog__filters-accordion-btn">
-                                    <h4 class="catalog__filters-dropdown-group-heading">
-                                        Цвета
-                                    </h4>
-                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
-                                        <use xlink:href="#arrow-down"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog__filters-accordion-content">
-                                    <div class="catalog__filters-accordion-content-inner">
-                                        <ul class="catalog__filters-dropdown-group-list">
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Бежевый
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #E1E1C5;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Белый
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #fff; border: 1px solid #979797;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Другой
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #D8D8D8;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Желтый
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #FFF480;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Зеленый
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #01AB5B;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Коричневый
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #8B5939;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Красный
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #EF3E35;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Оранжевый
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #FDC279;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Принт
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #D8D8D8;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Розовый
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #E540B1;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Серый
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #D8D8D8;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Синий
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #289DFA;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Фиолетовый
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #BC89EE;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Черный
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #BC89EE;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label
-                                                    class="catalog__filters-dropdown-checkbox catalog__filters-dropdown-checkbox--color">
-                                                    <input type="checkbox"
-                                                        class="catalog__filters-dropdown-checkbox-input" name="color">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Экрю
-                                                    </span>
-
-                                                    <span class="catalog__filters-dropdown-checkbox-color"
-                                                        style="background-color: #D8D8D8;">
-
-                                                    </span>
-                                                </label>
-                                            </li>
-
-                                        </ul>
-                                    </div>
+                                    </ul>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
-                    <div class="catalog__filters-dropdown-sorting">
-                        <div class="catalog__filters-dropdown-group">
-                            <div class="catalog__filters-accordion">
-                                <div class="catalog__filters-accordion-btn">
-                                    <h4 class="catalog__filters-dropdown-group-heading">
-                                        Сортировка
-                                    </h4>
-                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
-                                        <use xlink:href="#arrow-down"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog__filters-accordion-content">
-                                    <div class="catalog__filters-accordion-content-inner">
-                                        <ul class="catalog__filters-dropdown-group-list">
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="sorting">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Цена по возрастанию
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="sorting">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        Цена по убыванию
-                                                    </span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    <div class="catalog__filters-dropdown-group">
+                        <div class="catalog__filters-accordion">
+                            <div class="catalog__filters-accordion-btn">
+                                <h4 class="catalog__filters-dropdown-group-heading">
+                                    Язык
+                                </h4>
+                                <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </div>
+                            <div class="catalog__filters-accordion-content">
+                                <div class="catalog__filters-accordion-content-inner">
+                                    <ul class="catalog__filters-dropdown-group-list">
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="language" value="Русский">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Русский
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="language" value="Английский">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Английский
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="language" value="Арабский">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Арабский
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                    </ul>
                                 </div>
                             </div>
-
-
                         </div>
-                        <div class="catalog__filters-dropdown-group">
-                            <div class="catalog__filters-accordion">
-                                <div class="catalog__filters-accordion-btn">
-                                    <h4 class="catalog__filters-dropdown-group-heading">
-                                        Диапазон цен
-                                    </h4>
-                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
-                                        <use xlink:href="#arrow-down"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog__filters-accordion-content">
-                                    <div class="catalog__filters-accordion-content-inner">
-                                        <ul class="catalog__filters-dropdown-group-list">
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="pricerange" value="1">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        до 1000 р
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="pricerange" value="2">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        до 2000 р
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="pricerange" value="3">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        до 3000 р
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="pricerange" value="4">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        до 4000 р
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="pricerange" value="more">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        более
-                                                    </span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
 
 
-                        </div>
-                        <div class="catalog__filters-dropdown-group">
-                            <div class="catalog__filters-accordion">
-                                <div class="catalog__filters-accordion-btn">
-                                    <h4 class="catalog__filters-dropdown-group-heading">
-                                        Скидка
-                                    </h4>
-                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
-                                        <use xlink:href="#arrow-down"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog__filters-accordion-content">
-                                    <div class="catalog__filters-accordion-content-inner">
-                                        <ul class="catalog__filters-dropdown-group-list">
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="discount" value="1">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        до 30%
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="discount" value="2">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        30 - 50%
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="discount" value="3">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        50 - 60%
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="catalog__filters-dropdown-group-list-item">
-                                                <label class="catalog__filters-dropdown-checkbox">
-                                                    <input type="radio" class="catalog__filters-dropdown-checkbox-input"
-                                                        name="discount" value="4">
-                                                    <span class="catalog__filters-dropdown-checkbox-text">
-                                                        + 60%
-                                                    </span>
-                                                </label>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
                     </div>
+                    <div class="catalog__filters-dropdown-group">
+                        <div class="catalog__filters-accordion">
+                            <div class="catalog__filters-accordion-btn">
+                                <h4 class="catalog__filters-dropdown-group-heading">
+                                    Наличие
+                                </h4>
+                                <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </div>
+                            <div class="catalog__filters-accordion-content">
+                                <div class="catalog__filters-accordion-content-inner">
+                                    <ul class="catalog__filters-dropdown-group-list">
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="presence" value="В наличии">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    В наличии
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="presence" value="Под заказ">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Под заказ
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__filters-dropdown-group-list-item">
+                                            <label class="catalog__filters-dropdown-checkbox">
+                                                <input type="checkbox" class="catalog__filters-dropdown-checkbox-input"
+                                                    name="presence" value="Предзаказ">
+                                                <span class="catalog__filters-dropdown-checkbox-text">
+                                                    Предзаказ
+                                                </span>
+                                            </label>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </div>
             </form>
 
