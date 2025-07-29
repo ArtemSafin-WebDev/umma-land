@@ -9,33 +9,67 @@
 }
 
 .checkout__row {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 48rem);
+    grid-column-gap: 30rem;
+    grid-template-areas: 'left right';
+
+    &--inversed {
+        grid-column-gap: 30rem;
+        grid-template-columns: minmax(0, 48rem) minmax(0, 1fr);
+        grid-template-areas: 'right left';
+    }
+
+    @include breakpoint(tablet) {
+        grid-column-gap: 5rem;
+    }
     @include breakpoint(small-tablet) {
+        display: flex;
         flex-direction: column;
+        gap: 0;
     }
 }
 
+.checkout__form-combined {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.checkout__grid {
+    display: grid;
+    grid-gap: 3.2rem;
+    grid-row-gap: 4.8rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.checkout__grid-item {
+    display: flex;
+    flex-direction: column;
+
+    &--with-margin {
+        margin-top: 6rem;
+    }
+
+    &--fullwidth {
+        grid-column: 1 / -1;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        grid-column: 1 / -1;
+    }
+}
 .checkout__left-col {
-    width: 50%;
-    flex-grow: 1;
+    grid-area: left;
     @include breakpoint(small-tablet) {
-        width: 100%;
-        margin-bottom: 7rem;
         display: contents;
     }
 }
 
 .checkout__right-col {
-    width: 48rem;
-    margin-left: 16rem;
-
-    @include breakpoint(tablet) {
-        margin-left: 5rem;
-    }
-
+    grid-area: right;
     @include breakpoint(small-tablet) {
-        margin: 0;
-        width: 100%;
         display: contents;
     }
 }
@@ -60,6 +94,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
 
     &--with-bar {
         padding-bottom: 2.2rem;
@@ -163,7 +201,7 @@
     font-style: normal;
 
     line-height: normal;
-    &:last-child {
+    &:not(.checkout__cart-totals-item--with-last-border):last-child {
         border: none;
     }
 
@@ -267,6 +305,10 @@
 .checkout__form-user-info {
     margin-bottom: 5rem;
 
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     @include breakpoint(mobile) {
         margin-bottom: 4rem;
     }
@@ -282,6 +324,16 @@
     font-style: normal;
     font-weight: 500;
     line-height: 2rem;
+
+    &--with-border {
+        padding-bottom: 2.4rem;
+        border-bottom: 1px solid currentColor;
+        margin-bottom: 0;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 1.6rem;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
@@ -536,11 +588,43 @@
 .checkout__rules {
     margin-top: 6rem;
 
+    .checkout__grid-item & {
+        margin-top: 0;
+    }
+
     @include breakpoint(small-tablet) {
         order: 10;
     }
 }
 
+.checkout__combined-total {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--text-color);
+    margin-bottom: 5rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.checkout__combined-policy {
+    padding-top: 1.6rem;
+    border-top: 1px solid #efefef;
+    margin-bottom: 6.8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4.7rem;
+    }
+}
 .checkout__cart-wrapper {
     @include breakpoint(small-tablet) {
         margin-top: 7rem;
@@ -603,6 +687,20 @@
     line-height: 2rem;
     color: var(--text-grey);
     transition: color 0.2s, border-color 0.2s;
+
+    .checkout__form-combined-option & {
+        border: none;
+        color: var(--text-color);
+    }
+}
+
+.checkout__form-combined-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout__form-combined-option {
+    border-bottom: 1px solid #efefef;
 }
 
 .checkout__form-payment-checkbox-mark {
@@ -617,6 +715,10 @@
     justify-content: center;
     transition: border-color 0.2s;
     border-radius: 50%;
+
+    .checkout__form-combined-option & {
+        border-color: var(--text-color);
+    }
 
     &::before {
         content: '';
@@ -634,6 +736,14 @@
 .checkout__form-payment-checkbox-text {
     width: 30%;
     flex-grow: 1;
+}
+
+.checkout__form-payment-checkbox-secondary-text {
+    strong {
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--text-color);
+    }
 }
 
 .checkout__form-payment-checkbox-image {

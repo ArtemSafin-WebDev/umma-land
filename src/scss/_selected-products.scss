@@ -12,7 +12,7 @@
 
 .selected-products__top-row {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 2rem;
     margin-bottom: 1.9rem;
 
@@ -46,7 +46,7 @@
     line-height: 1.2;
     color: var(--text-grey);
     margin-left: auto;
-    align-self: flex-end;
+
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 1px;

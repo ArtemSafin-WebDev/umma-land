@@ -162,6 +162,12 @@
     column-count: 2;
     column-gap: 3.2rem;
 
+    .checkout__grid-item & {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
     @include breakpoint(mobile) {
         column-count: 1;
         display: flex;
@@ -176,6 +182,10 @@
 
     break-inside: auto;
     margin-bottom: 1rem;
+
+    .checkout__grid-item & {
+        margin: 0;
+    }
 
     @include breakpoint(mobile) {
         width: auto;
