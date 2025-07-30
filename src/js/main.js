@@ -19,6 +19,7 @@ import timeMask from './timeMask';
 import searchModal from './searchModal';
 import changeReturnTime from './changeReturnTime';
 import productImages from './productImages';
+import priceRange from './priceRange';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     searchModal();
     changeReturnTime();
     productImages();
+    priceRange();
 });
 
 window.addEventListener('load', function() {

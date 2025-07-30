@@ -292,12 +292,103 @@
     flex-direction: column;
     display: flex;
     grid-column: span 2;
+
+    &--range {
+        grid-column: span 4;
+    }
     @include breakpoint(mobile) {
         margin-bottom: 3rem;
         align-items: stretch;
     }
     &:last-child {
         margin-bottom: 0;
+    }
+}
+
+.catalog__filters-range-slider-wrapper {
+    width: 100%;
+    max-width: 43rem;
+    margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin: 0;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+.catalog__filters-range-slider {
+    height: 2px;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background-color: #a8a8a8;
+    .noUi-connect {
+        background: var(--text-color);
+    }
+
+    .noUi-handle {
+        height: 12px;
+        width: 12px;
+        top: -5px;
+        right: -6px;
+        border-radius: 50%;
+        box-shadow: none;
+        background-color: var(--text-color);
+        border: none;
+        cursor: pointer;
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .noUi-handle .noUi-touch-area {
+        border: 1px solid transparent;
+        position: absolute;
+        inset: -5px;
+        width: auto;
+        height: auto;
+    }
+
+    // .noUi-handle:hover .noUi-touch-area {
+    //     border: 1px dashed #7f7f7f;
+    // }
+
+    .noUi-handle .noUi-tooltip {
+        top: 100%;
+        margin-top: 5px;
+        bottom: auto;
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+        border: none;
+        color: var(--text-color);
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+            line-height: normal;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        .noUi-handle-upper .noUi-tooltip {
+            left: auto;
+            right: 0;
+            transform: none;
+        }
+        .noUi-handle-lower .noUi-tooltip {
+            right: auto;
+            left: 0;
+            transform: none;
+        }
     }
 }
 
