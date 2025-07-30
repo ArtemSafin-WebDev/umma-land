@@ -3,7 +3,7 @@ import 'parsleyjs';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 
-dayjs.extend(customParseFormat)
+dayjs.extend(customParseFormat);
 
 window.Parsley.addValidator('phone', {
     requirementType: 'string',
@@ -22,8 +22,8 @@ window.Parsley.addValidator('date', {
         console.log('Validating date', {
             value,
             valid: dayjs(value, 'DD.MM.YYYY', true).isValid()
-        })
-        return dayjs(value, 'DD.MM.YYYY', true).isValid()
+        });
+        return dayjs(value, 'DD.MM.YYYY', true).isValid();
     },
     messages: {
         en: 'Enter correct date',
@@ -36,8 +36,8 @@ window.Parsley.addValidator('time', {
         console.log('Validating time', {
             value,
             valid: dayjs(value, 'HH:mm', true).isValid()
-        })
-        return dayjs(value, 'HH:mm', true).isValid()
+        });
+        return dayjs(value, 'HH:mm', true).isValid();
     },
     messages: {
         en: 'Enter correct time',
@@ -100,6 +100,7 @@ export default function validation() {
     const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
 
     formsToValidate.forEach(form => {
+        console.log('Adding validation to form', form);
         $(form).parsley({});
     });
 }

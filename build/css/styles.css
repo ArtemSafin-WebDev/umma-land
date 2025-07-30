@@ -3485,7 +3485,7 @@ select:-webkit-autofill:focus {
 }
 
 .page-footer__nav-col {
-  grid-column: 3/8;
+  grid-column: 3/9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3504,7 +3504,7 @@ select:-webkit-autofill:focus {
 
 .page-footer__nav-items {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-column-gap: var(--column-gap, 0);
   margin-bottom: 7.2rem;
 }
@@ -3525,11 +3525,8 @@ select:-webkit-autofill:focus {
   }
 }
 
-.page-footer__nav-item:nth-child(odd) {
+.page-footer__nav-item {
   grid-column: span 2;
-}
-.page-footer__nav-item:nth-child(even) {
-  grid-column: span 3;
 }
 @media only screen and (max-width: 640px) {
   .page-footer__nav-item {
@@ -5251,6 +5248,9 @@ select:-webkit-autofill:focus {
   }
 }
 
+.product__images-toggle-btn {
+  display: none;
+}
 @media only screen and (max-width: 640px) {
   .product__images-toggle-btn {
     grid-area: stack;
@@ -7889,6 +7889,7 @@ select:-webkit-autofill:focus {
   font-style: normal;
   font-weight: 400;
   line-height: 2rem;
+  margin-top: 0.1rem;
 }
 @media only screen and (max-width: 640px) {
   .account-checkbox-text {

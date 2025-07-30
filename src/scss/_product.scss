@@ -85,6 +85,7 @@
 }
 
 .product__images-toggle-btn {
+    display: none;
     @include breakpoint(mobile) {
         grid-area: stack;
         z-index: 30;
