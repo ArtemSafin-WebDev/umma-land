@@ -19,10 +19,12 @@ export default function priceRange() {
         const max = Number(element.getAttribute('data-max'));
         const start = Number(element.getAttribute('data-start'));
         const end = Number(element.getAttribute('data-end'));
+        const margin = element.hasAttribute('data-margin') ? Number(element.getAttribute('data-margin')) : 0;
         noUiSlider.create(element, {
             start: [start, end],
             range: { min, max },
             step: 1,
+            margin,
             tooltips: true,
             format: format,
             connect: true

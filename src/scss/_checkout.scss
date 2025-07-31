@@ -683,10 +683,14 @@
     padding: 1.6rem;
     min-height: 6.4rem;
     border: 1px solid var(--text-grey);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2rem;
     color: var(--text-grey);
     transition: color 0.2s, border-color 0.2s;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
 
     .checkout__form-combined-option & {
         border: none;
@@ -704,8 +708,8 @@
 }
 
 .checkout__form-payment-checkbox-mark {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
     flex-shrink: 0;
     border: 1px solid var(--text-grey);
     margin-right: 1.2rem;
