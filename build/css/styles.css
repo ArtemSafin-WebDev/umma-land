@@ -6917,7 +6917,7 @@ select:-webkit-autofill:focus {
 }
 .register__my-orders--order th:nth-child(6),
 .register__my-orders--order td:nth-child(6) {
-  width: 14rem;
+  width: 18rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-flex: 0;
@@ -7137,10 +7137,10 @@ select:-webkit-autofill:focus {
   line-height: normal;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 1rem 1.4rem;
+  min-width: 100%;
   text-align: center;
   border: 1px solid var(--text-grey);
-  width: 100%;
+  width: auto;
   -webkit-transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   text-align: center;
@@ -7148,6 +7148,7 @@ select:-webkit-autofill:focus {
       -ms-flex-pack: center;
           justify-content: center;
   white-space: nowrap;
+  padding: 1rem 1.4rem;
 }
 @media (hover: hover) and (pointer: fine) {
   .register__my-orders-return-btn:hover {
@@ -7494,7 +7495,7 @@ select:-webkit-autofill:focus {
   padding: 1.2rem 3.6rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: normal;
   text-align: center;
   -webkit-box-pack: center;
